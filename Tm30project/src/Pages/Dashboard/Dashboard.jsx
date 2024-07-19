@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar'
-import Rightsidebar from '../../Components/Rightsidebar'
+import Rightsidebar from './Rightsidebar'
 
 function Dashboard() {
 
