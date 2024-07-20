@@ -35,7 +35,7 @@ function Sidebar() {
               return (
                 <div key={item.id}>
                   <NavLink to={item.path}>
-                    <div className='info'>{item.indicator}<div style={{ marginRight: '8px' }}>{item.icon}</div> {item.title}</div>
+                    <div className='info'><div className='chevron'>{item.indicator}</div><div style={{ marginRight: '8px' }}>{item.icon}</div> {item.title}</div>
                   </NavLink>
                 </div>
               )
@@ -70,6 +70,8 @@ const Aiv = styled.div`
     
     color: #ffff;
     width: 13px;
+    /* display: none; */
+
   } 
   a.active .chevron {
     display: block;
