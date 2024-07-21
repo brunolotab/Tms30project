@@ -16,8 +16,8 @@ function Sidebar() {
     <Aiv>
       <div className='m-0 p-0 fixed top-0 left-0  z-[999]'>
         <div className='bg-white border border-slate-200 w-[13rem] text-center p-4 font-semibold text-color4'>
-          <div className='pr-6 p-4 '>BigFoot</div>
-          <div className=' leading-[3.1rem] p-4 pl-2 '>
+          <div className='pr-6  '>BigFoot</div>
+          <div className=' leading-[3.3rem] p-4  pl-2 '>
             {/* <NavLink to={'/'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Dashboard</div></NavLink>
             <NavLink to={'Acquires'}><div className='info'><BiChevronRight className='chevron' /><FiShoppingBag style={{ marginRight: '8px' }} /> Acquires</div></NavLink>
             <NavLink to={'Merchants'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Merchants</div></NavLink>

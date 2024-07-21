@@ -13,40 +13,38 @@ function Processors() {
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-blue-700 font-bold text-[13px] '> + Add New Processors</button></div>
       </div>
       <div className='text-[14px]'>
-        {
-          dataProcessor.map((item,id)=>{
-            return(
-              <div key={id}>
-                <table className='leading-8 w-[100%] text-[14px]' >
-                  <tr>
-                    <th>{item.PID}</th>
-                    <th>{item.PName}</th>
-                    <th>{item.PAdress}</th>
-                    <th>{item.PPort}</th>
-                    <th>{item.PType}</th>
-                    <th>{item.PDesc}</th>
-                  </tr>
-                  <tr>
-                    <td>{item.ID}</td>
-                    <td>{item.Name}</td>
-                    <td>{item.Adress}</td>
-                    <td>{item.Port}</td>
-                    <td>{item.Type}</td>
-                    <td>{item.Desc}</td>
-                  </tr>
-                </table>
-                </div>
-            )
-          })
-        }
+        <table className='leading-8 w-[100%] text-[14px]' >
+          <tr>
+            <th>PROCESSOR 1D</th>
+            <th>PROCESSOR NAME</th>
+            <th>PROCESSOR IP ADRESS</th>
+            <th>PROCESSOR PORT NO.</th>
+            <th>PROCESSOR TYPE</th>
+            <th>PROCESSOR DESCRIPTION</th>
+          </tr>
+          {
+            dataProcessor.map((item, id) => {
+              return (
+                <tr key={id}>
+                  <td>{item.ID}</td>
+                  <td>{item.Name}</td>
+                  <td>{item.Adress}</td>
+                  <td>{item.Port}</td>
+                  <td>{item.Type}</td>
+                  <td>{item.Desc}</td>
+                </tr>
+              )
+            })
+          }
+        </table>
       </div>
-    </Div>
+    </Div >
   )
 }
 
 export default Processors
 
-const Div = styled.div `
+const Div = styled.div`
   td {
     text-align: left;
     width: 5rem;
@@ -54,9 +52,10 @@ const Div = styled.div `
   }
   tr:nth-child(odd) {
     background-color: #fafafa;
+    width: 7rem;
   }
   th {
-    width: 7rem;
+    padding-left: -12px;
     font-size: 14px;
     border: 1px solid red;
 
