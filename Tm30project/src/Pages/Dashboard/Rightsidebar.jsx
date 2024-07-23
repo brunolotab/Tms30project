@@ -1,6 +1,7 @@
 import React from 'react'
 import FIcon from '../../assets/Icons/FIcon.png'
 import FIcon2 from '../../assets/Icons/FIcon 2.png'
+import FIcon3 from '../../assets/Icons/FIcon3.png'
 import { transactions } from './RecentTransaction/RecentTrans'
 
 function Rightsidebar() {
@@ -79,7 +80,7 @@ function Rightsidebar() {
                                         ? <img src={FIcon2} alt=''/>
                                         : item.status === 'sucessful'
                                         ? <img src={FIcon} alt=''/>
-                                        : 'pending'
+                                        : <img src={FIcon3} alt=''/>
                                     }
                                     </div>
                                     <div>{item.text}</div>

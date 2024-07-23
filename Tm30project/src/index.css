@@ -3,5 +3,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: regular;
+    src: url(./assets/Inter-4.0/web/Inter-Regular.woff2);
+    font-display: swap;
+  }
+@font-face {
+    font-family: mediumFont;
+    src: url(./assets/Inter-4.0/web/Inter-Medium.woff2);
+    font-display: swap;
+  }
+@font-face {
+    font-family: semiBoldFont;
+    src: url(./assets/Inter-4.0/web/Inter-SemiBold.woff2);
+    font-display: swap;
+  }
 
+  body {
+    font-family: regular;
+  }
 

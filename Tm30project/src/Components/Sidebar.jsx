@@ -1,12 +1,12 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { TiFolder } from 'react-icons/ti'
-import { BiBookOpen, BiChevronRight } from 'react-icons/bi'
-import { FiShoppingBag } from 'react-icons/fi'
-import { TfiPieChart } from 'react-icons/tfi'
+import Avatar from '../assets/Icons/Avatar.jpg'
+// import { TiFolder } from 'react-icons/ti'
+// import { BiBookOpen, BiChevronRight } from 'react-icons/bi'
+// import { FiShoppingBag } from 'react-icons/fi'
+// import { TfiPieChart } from 'react-icons/tfi'
 import styled from 'styled-components'
 import { SideData } from './SideBar/SidebarData'
-// import {ViSeBook} from 'react-icons/vi'
 
 function Sidebar() {
 
@@ -15,9 +15,9 @@ function Sidebar() {
   return (
     <Aiv>
       <div className='m-0 p-0 fixed top-0 left-0  z-[999]'>
-        <div className='bg-white border border-slate-200 w-[13rem] text-center p-4 font-semibold text-color4'>
-          <div className='pr-6  '>BigFoot</div>
-          <div className=' leading-[3.3rem] p-4  pl-2 '>
+        <div className='bg-white border border-slate-200 w-[13rem] text-center text-[15px] p-4 font-semibold text-color4'>
+          <div className='pr-14 flex justify-center items-center  '><div className='image'><img src={Avatar} alt=''/></div><span>BigFoot</span> </div>
+          <div className=' leading-[3.2rem] p-4  pl-2 '>
             {/* <NavLink to={'/'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Dashboard</div></NavLink>
             <NavLink to={'Acquires'}><div className='info'><BiChevronRight className='chevron' /><FiShoppingBag style={{ marginRight: '8px' }} /> Acquires</div></NavLink>
             <NavLink to={'Merchants'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Merchants</div></NavLink>
@@ -78,4 +78,13 @@ const Aiv = styled.div`
     color:#1B59F8;
 
   } 
+  .image {
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
 `

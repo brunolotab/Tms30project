@@ -5,10 +5,9 @@ import styled from 'styled-components'
 
 function Terminals() {
 
-  const DataTerminal = DataTerminals
 
   return (
-    <Div className='w-[100vw]'>
+    <Div>
       <Navbar />
        <div className='flex justify-between align-middle bg-white p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
         <div className='font-bold text-xl'>Merchants</div>
@@ -20,8 +19,8 @@ function Terminals() {
           <button className='border border-blue-700 rounded-[4px] p-2 w-25 text-blue-800 bg-blue-500'> Apply</button>
         </div>
       </div>
-      <div className='text-[14px] leading-[2.6rem] w-[100vw] font-medium'>
-        <table className=' w-[100%]'>
+      <div className='text-[14px] leading-[2.6rem] w-[100%] font-medium overflow-auto'>
+        <table className=' w-[120%]'>
           <tr>
             <th>TERMINAL ID</th>
             <th>TYPE</th>
@@ -36,19 +35,22 @@ function Terminals() {
             <th>DATE CREATED</th>
           </tr>
           {
-            DataTerminal.map((item) => {
+            DataTerminals.map((item) => {
               return(
                 <tr key={item.id} >
                   <td className='pl-4'>{item.TID}</td>
-                  <td className='pl-4'>{item.Type}</td>
+                  <td className='pl-4' style={{fontFamily:'semiBoldFont'}} >{item.Type}</td>
                   <td className='pl-4'>{item.Snumber}</td>
                   <td className='pl-4'>{item.Fnumber}</td>
                   <td className='pl-4'>{item.Bnumber}</td>
                   <td className='pl-4'>{item.MID}</td>
                   <td className='pl-4'>{item.OS}</td>
-                  <td className={`text-[${
+                  <td style={{color:`${
+                  item?.TStatus === 'Active'? 'green' : 'red'
+                }`, paddingLeft:'1rem'}} >{item.TStatus}</td>
+                  {/* <td className={`text-[${
                   item?.TStatus === 'Active'? 'bg-green-800' : 'bg-red-800'
-                }] pl-4`} >{item.TStatus}</td>
+                }] pl-4`} >{item.TStatus}</td> */}
                   <td className='pl-4'>{item.Adress}</td>
                   <td className='pl-4'>{item.Code}</td>
                   <td className='pl-4'>{item.Date}</td>
