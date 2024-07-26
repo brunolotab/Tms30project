@@ -9,20 +9,20 @@ function Terminals() {
   return (
     <Div>
       <Navbar />
-       <div className='flex justify-between align-middle bg-white p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
+       <div className='flex justify-between align-middle bg-primary p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
         <div className='font-bold text-xl'>Merchants</div>
-        <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-blue-700 font-bold text-[13px] '> + Add New Merchant</button></div>
+        <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Merchant</button></div>
       </div>
       <div className='p-5'>
-        <div className='flex gap-4'>
+        <div className='flex gap-4 pl-2'>
           <div className='p-2 border border-black rounded-[4px] w-[10rem]'> Bulk Actions</div>
-          <button className='border border-blue-700 rounded-[4px] p-2 w-25 text-blue-800 bg-blue-500'> Apply</button>
+          <button className='border border-sidebar rounded-[4px] p-2 w-25 text-sidebar bg-blue-500'> Apply</button>
         </div>
       </div>
       <div className='text-[14px] leading-[2.6rem] w-[100%] font-medium overflow-auto'>
         <table className=' w-[120%]'>
           <tr>
-            <th>TERMINAL ID</th>
+            <th className='pl-4'>TERMINAL ID</th>
             <th>TYPE</th>
             <th>SERIAL NUMBER</th>
             <th>FIRMWARE NUMBER</th>
@@ -38,7 +38,7 @@ function Terminals() {
             DataTerminals.map((item) => {
               return(
                 <tr key={item.id} >
-                  <td className='pl-4'>{item.TID}</td>
+                  <td className='pl-6'>{item.TID}</td>
                   <td className='pl-4' style={{fontFamily:'semiBoldFont'}} >{item.Type}</td>
                   <td className='pl-4'>{item.Snumber}</td>
                   <td className='pl-4'>{item.Fnumber}</td>

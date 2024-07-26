@@ -1,21 +1,26 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar'
 import Rightsidebar from './Rightsidebar'
+// import ApexChart from './Barchart'
+import Barchart from './Charts/Barchart'
+// import ApexCharts from 'apexcharts'
+
+
 
 function Dashboard() {
 
     return (
         <>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', width:'100%' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', width:'100%', background:'#FEFEFE' }}>
 
                 <div style={{ gridRowStart:'1', gridColumnstart: '1',gridColumnEnd:'1'}}>
                     <div><Navbar /> </div>
 
 
                  
-                    <div className='grid grid-cols-4 gap-6 p-4 w-[100%] justify-items-center text-[14px] text-color4 '> 
+                    <div className='grid grid-cols-4  p-4 w-[100%] justify-items-center text-[14px] text-color4 '> 
                          {/* <div style={{display:'grid', gridTemplateColumns:'repeat(4, 1fr)', gap:'2rem',padding:'1rem',width:'75%', paddingLeft:'6rem'}} > */}
-                         <div className='w-[12rem] rounded-lg bg-black'>
+                         <div className='w-[12rem] rounded-lg bg-black '>
                             <div className='bg-white w-[12rem] rounded-t-lg p-2 px-4 border border-slate-200  leading-8 mb-2 '>
                                 <div>Number of Acquires</div>
                                 <div className='text-3xl font-semibold'>6</div>
@@ -79,6 +84,8 @@ function Dashboard() {
 
 
                     </div> 
+                    <div className='p-4'><Barchart/></div>
+                    {/* <ApexChart/> */}
                  </div> 
                 <div style={{ gridRowStart:'1',gridColumn: '2', gridColumnEnd:'2' }}><Rightsidebar /></div>
             </div>

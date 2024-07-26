@@ -8,8 +8,8 @@ function SecRouting() {
     <Div>
       <Navbar/>
       <div className='flex justify-between align-middle bg-white p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
-        <div className='font-bold text-xl'>Secondary Routing Configuration</div>
-        <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-blue-700 font-bold text-[13px] '> + Add New Configuration</button></div>
+        <div className='font-bold text-xl pl-8'>Secondary Routing Configuration</div>
+        <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Configuration</button></div>
       </div>
       <div className='text-14  w-[100%] leading-8'>
         <table>

@@ -19,7 +19,7 @@ function Rightsidebar() {
 
     return (
         <div>
-            <div className='w-[18rem] p-4 text-color4 font-semibold z-[999] border border-slate-200 text-[14px] h-[100vh] '>
+            <div className='w-[18rem] p-4 text-color4 font-semibold z-[999] border border-slate-200 text-[14px] '>
                 <div className='font-semibold text-[16px] py-5'>Recent Transactions</div>
                 {/* <div className='leading-4 pb-4'>
                     <div><img src={FIcon} alt=''/></div><div>TID 234532 Withdraw 10,00...</div>

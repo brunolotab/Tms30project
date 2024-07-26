@@ -9,7 +9,7 @@ function Navbar() {
 
   return (
     <>
-        <div className='bg-white border-slate-200 border p-4  flex justify-between items-center'>
+        <div className='bg-[#FEFEFE] border-slate-200 border p-4  flex justify-between items-center'>
             <div className='flex justify-around w-[10rem]'>
                 <div>BigFoot</div>
                 <div>title</div>

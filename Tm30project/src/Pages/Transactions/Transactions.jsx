@@ -13,10 +13,10 @@ function Transactions() {
         <div className='font-bold text-xl'>Transactions</div>
         <div><button className=' p-6 py-2 rounded-[4px] border border-blue-800 text-blue-700 font-semibold text-[13px] '> Filter By</button></div>
       </div>
-      <div className='text-[14px] leading-[2.6rem] w-[100%] font-medium'>
-        <table className=' max-w-[100vw] gap-8 py-9'>
-          <tr>
-            <th>TRANSACTION ID</th>
+      <div className='text-[14px] leading-[2.6rem] w-[100%] overflow-auto' style={{fontFamily:'mediumFont'}}>
+        <table className='w-[120%]  py-9'>
+          <tr className='text-left'>
+            <th className='pl-7'>TRANSACTION ID</th>
             <th>REF.NO</th>
             <th>PAN</th>
             <th>AMOUNT</th>
@@ -33,17 +33,17 @@ function Transactions() {
             Datatransaction?.map((item,id) =>{
               return (
                 <tr key={id}>
-                  <td  className=''>{item.Id}</td>
-                  <td className='pl-7'>{item.RefNo}</td>
-                  <td className='pl-7'>{item.Pan}</td>
-                  <td className='pl-7'>{item.Amt}</td>
-                  <td className='pl-7'>{item.ProId}</td>
-                  <td className='pl-7'>{item.Type}</td>
-                  <td className='pl-7'>{item.TID}</td>
-                  <td className='pl-7'>{item.STID}</td>
-                  <td className='pl-7'>{item.Fee}</td>
-                  <td className='pl-7'>{item.Tfree}</td>
-                  <td className='pl-7'>{item.date}</td>                 
+                  <td  className='pl-7'>{item.Id}</td>
+                  <td >{item.RefNo}</td>
+                  <td>{item.Pan}</td>
+                  <td >{item.Amt}</td>
+                  <td >{item.ProId}</td>
+                  <td>{item.Type}</td>
+                  <td>{item.TID}</td>
+                  <td>{item.STID}</td>
+                  <td>{item.Fee}</td>
+                  <td>{item.Tfree}</td>
+                  <td>{item.date}</td>                 
                 </tr>
               )
             })

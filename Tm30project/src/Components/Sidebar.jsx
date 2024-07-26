@@ -14,10 +14,10 @@ function Sidebar() {
 
   return (
     <Aiv>
-      <div className='m-0 p-0 fixed top-0 left-0  z-[999]'>
-        <div className='bg-white border border-slate-200 w-[13rem] text-center text-[15px] p-4 font-semibold text-color4'>
+      <div className='m-0 p-0 fixed top-0 left-0  z-[999] h-[100%] overflow-y-auto overflow-x-hidden'>
+        <div className='bg-white border border-slate-200 w-[13rem]  text-center text-[15px] p-4 text-color4' style={{fontFamily:'semiBoldFont'}}>
           <div className='pr-14 flex justify-center items-center  '><div className='image'><img src={Avatar} alt=''/></div><span>BigFoot</span> </div>
-          <div className=' leading-[3.2rem] p-4  pl-2 '>
+          <div className='  leading-[3.0rem] p-4  pl-2 '>
             {/* <NavLink to={'/'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Dashboard</div></NavLink>
             <NavLink to={'Acquires'}><div className='info'><BiChevronRight className='chevron' /><FiShoppingBag style={{ marginRight: '8px' }} /> Acquires</div></NavLink>
             <NavLink to={'Merchants'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Merchants</div></NavLink>

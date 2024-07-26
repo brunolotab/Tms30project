@@ -11,8 +11,8 @@ function Hsm() {
         <div className='font-bold'>Hardware Security Module (HSM)</div>
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold '> + Add New HSM</button></div>
       </div>
-      <div>
-        <table className='leading-6 w-[100%] h-[100vh] font-semibold'>
+      <div className='text-[14px]' style={{fontFamily:'semiBoldFont'}}>
+        <table className='leading-6 w-[100%] h-[100vh]'>
           <tr className=' bg-color1 '>
             <th>HSM ID </th> 
             <th>HSM NAME </th> 
