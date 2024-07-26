@@ -77,16 +77,5 @@ export const SideData = [
         icon: <BiBookOpen/>,
         indicator: <BiChevronRight/>
     },
-    {
-        title: 'Settinga',
-        path : 'setting',
-        icon: <BiBookOpen/>,
-        indicator: <BiChevronRight/>
-    },
-    {
-        title: 'Settingb',
-        path : 'setting',
-        icon: <BiBookOpen/>,
-        indicator: <BiChevronRight/>
-    },
+ 
 ] 
