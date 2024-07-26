@@ -3,31 +3,41 @@ import Chart from 'react-apexcharts'
 
 function Barchart() {
 
+  const [color, setColor]=useState('')
+  const [color2, setColor2]=useState('')
+  const [color3, setColor3]=useState('')
 
-    const handleWithDrawer =()=>{
-     
+    const handleDrawer =(color)=>{
+     setColor(color);
+     setColor2('');
+     setColor3('')
     
     }
-    const handleDeposit =()=>{
+    const handleDeposit =(color2)=>{
       
-      
+     setColor2(color2);
+     setColor3('')
+     setColor('')
     }
-    const handleVAS =()=>{
-     
+    const handleVAS =(color3)=>{
+      setColor3(color3);
+      setColor2('');
+      setColor('');
+
     }
 
   return (
     <div className='bg-#ffff p-4 border border-slate-200 ml-3 '>
       <div className='flex gap-4 items-center text-color3 text-[12px] pl-6'>
-        <div onClick={handleWithDrawer}>Withdrawer</div>
-        <div  onClick={handleDeposit}>Deposits</div>
-        <div onClick={handleVAS} >VAS Transactions</div>
+        <div onClick={handleDrawer}  className={`${(color)? 'bg-sidebar p-1 rounded-[4px] text-color4' :'bg-#ffff '}`}>Withdrawer</div>
+        <div onClick={handleDeposit} className={`${(color2)? 'bg-sidebar p-1 rounded-[4px] text-color4' : 'bg-#ffff'}`}>Deposits</div>
+        <div onClick={handleVAS} className={`${(color3)? 'bg-sidebar p-1 rounded-[4px] text-color4' : 'bg-#ffff'}`}>VAS Transactions</div>
       </div>
       <header>
         <Chart 
         type='bar'
         width={750}
-        height={350}
+        height={330}
         series={[
           {
             name:'Failure',
