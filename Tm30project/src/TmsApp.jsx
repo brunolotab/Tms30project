@@ -13,15 +13,17 @@ import Terminals from './Pages/Terminals/Terminals'
 import Bin from './Pages/Bin/Bin'
 import Logout from './Pages/Logout/Logout'
 import Hsmpg1 from './Pages/HSM/HSMPAGES/Hsmpg1'
-import Hsmpg2 from './Pages/HSM/HSMPAGES/Hsmpg2'
-import Hsmpg3 from './Pages/HSM/HSMPAGES/Hsmpg3'
 import Hsm from './Pages/HSM/Hsm'
-// import ContextApiProvider from './ContextApi/ContextApi'
+import Notification from './Pages/Notification/Notification'
+import ServHealth from './Pages/SerHealth/ServHealth'
+import LIcensing from './Pages/License/LIcensing'
+import Settings from './Pages/Settings/Settings'
+
 
 function TmsApp() {
   return (
     <>
-      {/* <ContextApiProvider> */}
+      
         <BrowserRouter>
         {/* <Navbar/> */}
        <Sidebar/>
@@ -40,13 +42,14 @@ function TmsApp() {
             <Route path='SecRouting' element= {<SecRouting/>}/>
             <Route path='Bin' element= {<Bin/>}/>
             <Route path='logout' element= {<Logout/>}/>
-            <Route path='Hsmpg1' element= {<Hsmpg1/>}/>
-            <Route path='Hsmpg2' element= {<Hsmpg2/>}/>
-            <Route path='Hsmpg3' element= {<Hsmpg3/>}/>
+            <Route path='health' element= {<ServHealth/>}/>
+            <Route path='licensing' element= {<LIcensing/>}/>
+            <Route path='notification' element= {<Notification/>}/>
+            <Route path='setting' element= {<Settings/>}/>
         </Routes>
         </div>
         </BrowserRouter>
-        {/* </ContextApiProvider> */}
+       
         
     </>
   )

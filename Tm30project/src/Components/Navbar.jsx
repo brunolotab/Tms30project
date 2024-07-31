@@ -6,13 +6,17 @@ import Sidebar from '../assets/Icons/Sidebar.jpg'
 
 function Navbar() {
   // const {title} = useContext(ContextApi)
+  // const{title} = useContext[ContextApi];
+  const path = window.location.pathname;
+  console.log(path)
+
 
   return (
     <>
         <div className='bg-[#FEFEFE] border-slate-200 border p-4  flex justify-between items-center'>
             <div className='flex justify-around w-[10rem]'>
                 <div>BigFoot</div>
-                <div>title</div>
+                <div>{path}</div>
             </div>
             <div className='flex gap-3 justify-evenly '>
                 <div><input type='text' className='rounded-[5px] bg-color1 p-[2px] px-[3px]' /></div>

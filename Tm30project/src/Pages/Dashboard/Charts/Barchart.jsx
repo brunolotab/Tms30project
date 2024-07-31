@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts'
 
 function Barchart() {
 
-  const [color, setColor]=useState('')
+  const [color, setColor]=useState('color')
   const [color2, setColor2]=useState('')
   const [color3, setColor3]=useState('')
 
@@ -28,10 +28,10 @@ function Barchart() {
 
   return (
     <div className='bg-#ffff p-4 border border-slate-200 ml-3 '>
-      <div className='flex gap-4 items-center text-color3 text-[12px] pl-6'>
-        <div onClick={handleDrawer}  className={`${(color)? 'bg-sidebar p-1 rounded-[4px] text-color4' :'bg-#ffff '}`}>Withdrawer</div>
-        <div onClick={handleDeposit} className={`${(color2)? 'bg-sidebar p-1 rounded-[4px] text-color4' : 'bg-#ffff'}`}>Deposits</div>
-        <div onClick={handleVAS} className={`${(color3)? 'bg-sidebar p-1 rounded-[4px] text-color4' : 'bg-#ffff'}`}>VAS Transactions</div>
+      <div className='flex gap-4 items-center text-color3 text-[12px] pl-6 cursor-pointer'>
+        <div onClick={handleDrawer}  className={`${(color)? 'bg-color1 p-1 px-2.5 rounded-[8px] text-sidebar' :'bg-#ffff '}`}>Withdrawer</div>
+        <div onClick={handleDeposit} className={`${(color2)? 'bg-color1 p-1 px-2.5 rounded-[8px] text-sidebar' : 'bg-#ffff'}`}>Deposits</div>
+        <div onClick={handleVAS} className={`${(color3)? 'bg-color1 p-1 px-2.5 rounded-[8px] text-sidebar' : 'bg-#ffff'}`}>VAS Transactions</div>
       </div>
       <header>
         <Chart 
@@ -51,7 +51,7 @@ function Barchart() {
           },
         ]}
         options={{
-          colors:['#b4a6a6','#000000'],
+          colors:['#D3D5D8','#212224'],
           xaxis:{
             tickPlacement:'on',
             categories:['Jan','Feb','Mar','Apr','May','Jun','July','Aug','Sept','Oct','Nov','Dec'],
@@ -60,7 +60,7 @@ function Barchart() {
          
           legend:{
             show:true,
-            position:'right',
+            position:'top',
            
           }
         }}

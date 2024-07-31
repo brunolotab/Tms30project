@@ -78,4 +78,25 @@ export const SideData = [
         indicator: <BiChevronRight/>
     },
  
+    {
+        title: 'Server Health',
+        path : 'health',
+        icon: <BiBookOpen/>,
+        indicator: <BiChevronRight/>
+    },
+ 
+    {
+        title: 'Liecencing',
+        path : 'licensing',
+        icon: <BiBookOpen/>,
+        indicator: <BiChevronRight/>
+    },
+ 
+    {
+        title: 'Notification Setting',
+        path : 'notification',
+        icon: <BiBookOpen/>,
+        indicator: <BiChevronRight/>
+    },
+ 
 ] 
