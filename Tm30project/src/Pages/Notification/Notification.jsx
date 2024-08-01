@@ -6,63 +6,59 @@ import SystemResource from './SeetingFolder/SystemFolder/SystemResource'
 
 
 
-
-
-
-// const reducer = (state, action)=> {
-//   switch(action.type){
-//     case 'rules':
-//       return {
-//           datta: state.datta (<TransactionRules/>)
-//       }
-//     case 'system':
-//       return {
-//           datta: state.datta (<SystemResource/>)
-//       }
-//   }
-// }
-
 function Notification() {
 
-  // const [state, dispatch] = useReducer(reducer, {datta: <TransactionRules/>, color1: '', color2: '', color3:''})
 
 
-  const [color, setColor]=useState('')
+  // const [color, setColor]=useState('')
 
-  const[data, setData] = useState(<TransactionRules/>);
+  // const[data, setData] = useState(<TransactionRules/>);
 
-  const rules =(color1)=>{
-    setData(<TransactionRules/>);
-    setColor(color1)
-  }
-  const system =()=>{
-    setData(<SystemResource/>)
-  }
-  const network =()=>{
-    setData(<Network/>)
-  }
+  // const rules =(color1)=>{
+  //   setData(<TransactionRules/>);
+  //   setColor(color1)
+  // }
+  // const system =()=>{
+  //   setData(<SystemResource/>)
+  // }
+  // const network =()=>{
+  //   setData(<Network/>)
 
-  
+  // }
+
+  const notifications = ['TransactionRules', 'SystemResource', 'Network'];
+
+  const [insert, setInsert] = useState('TransactionRules');
+
 
   return (
     <div>
-      <div><Navbar/></div>
-      <div className='text-lg border-b p-6 pl-8'>Notification Settings</div>
-      <div className='flex justify-around items-center text-[13px] border py-3'>
-        {/* <div onClick={(()=>dispatch({type:'rules'}))}>Transaction Rules</div> */}
-        <div onClick={rules} className={`${(color)? ' border-b-sidebar ' :'border-b-#ffff '}`}>Transaction Rules</div>
-        {/* <div onClick={(()=>dispatch({type:'system'}))}>System Resources</div> */}
-        <div onClick={system}>System Resources</div> 
-         <div onClick={network}>Network</div>
+      <div><Navbar /></div>
+      <div className='text-lg border-b p-4 pl-10'>Notification Settings</div>
+      <div className='flex justify-around items-center text-[13px] border'>
+        {
+          notifications?.map((item,id) => {
+            return (
+              <button key={id}
+                onClick={() => { setInsert(item) }}
+                className={` py-3 `}
+                style={{ borderBottom: item === insert ? '1px solid#1B59F8' : '' }}
+              >
+                {item}
+              </button>
+            )
+          })
+        }
+       
       </div>
+
       <div className='p-8'>
-        <div>
-          {data}
-          {/* {state.data} */}
-        </div>
+      {
+          insert === 'TransactionRules' ? <div><TransactionRules /></div> : insert === 'SystemResource' ? <div><SystemResource /></div> : <div><Network /></div>
+        }
+
       </div>
       
-      {/* className={`${(color)? 'bg-sidebar p-1 rounded-[4px] text-color4' :'bg-#ffff '}`} */}
 
     </div>
   )

@@ -7,7 +7,7 @@ import Acquires from './Pages/Acquires/Acquires'
 import Merchants from './Pages/Merchants/Merchants'
 import Transactions from './Pages/Transactions/Transactions'
 import Processors from './Pages/Processors/Processors'
-import PriRouting from './Pages/Prirouting/PriRouting'
+// import PriRouting from './Pages/Prirouting/PriRouting'
 import SecRouting from './Pages/Secrouting/SecRouting'
 import Terminals from './Pages/Terminals/Terminals'
 import Bin from './Pages/Bin/Bin'
@@ -18,6 +18,7 @@ import Notification from './Pages/Notification/Notification'
 import ServHealth from './Pages/SerHealth/ServHealth'
 import LIcensing from './Pages/License/LIcensing'
 import Settings from './Pages/Settings/Settings'
+import PrimaryRouting from './Pages/Prirouting/PriRouting'
 
 
 function TmsApp() {
@@ -38,8 +39,8 @@ function TmsApp() {
             <Route path='Transactions' element= {<Transactions/>}/>
             <Route path='HSM' element= {<Hsm/>}/>
             <Route path='Processors' element= {<Processors/>}/>
-            <Route path='PriRouting' element= {<PriRouting/>}/>
-            <Route path='SecRouting' element= {<SecRouting/>}/>
+            <Route path='Primary-Routing' element= {<PrimaryRouting/>}/>
+            <Route path='Secondary-Routing' element= {<SecRouting/>}/>
             <Route path='Bin' element= {<Bin/>}/>
             <Route path='logout' element= {<Logout/>}/>
             <Route path='health' element= {<ServHealth/>}/>

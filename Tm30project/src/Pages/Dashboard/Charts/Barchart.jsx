@@ -1,37 +1,32 @@
 import React, { useState } from 'react'
 import Chart from 'react-apexcharts'
 
-function Barchart() {
-
-  const [color, setColor]=useState('color')
-  const [color2, setColor2]=useState('')
-  const [color3, setColor3]=useState('')
-
-    const handleDrawer =(color)=>{
-     setColor(color);
-     setColor2('');
-     setColor3('')
-    
-    }
-    const handleDeposit =(color2)=>{
-      
-     setColor2(color2);
-     setColor3('')
-     setColor('')
-    }
-    const handleVAS =(color3)=>{
-      setColor3(color3);
-      setColor2('');
-      setColor('');
-
-    }
+function Barchart() {  
+  const tabs = ['Withdrawer', 'Deposits', 'VAS Transactions'];
+  const[currenttab, setCurrenttab] = useState('Withdrawer')
 
   return (
     <div className='bg-#ffff p-4 border border-slate-200 ml-3 '>
-      <div className='flex gap-4 items-center text-color3 text-[12px] pl-6 cursor-pointer'>
-        <div onClick={handleDrawer}  className={`${(color)? 'bg-color1 p-1 px-2.5 rounded-[8px] text-sidebar' :'bg-#ffff '}`}>Withdrawer</div>
-        <div onClick={handleDeposit} className={`${(color2)? 'bg-color1 p-1 px-2.5 rounded-[8px] text-sidebar' : 'bg-#ffff'}`}>Deposits</div>
-        <div onClick={handleVAS} className={`${(color3)? 'bg-color1 p-1 px-2.5 rounded-[8px] text-sidebar' : 'bg-#ffff'}`}>VAS Transactions</div>
+      <div className='flex gap-4 items-center text-color3 text-[12px] pl-6'>
+       {
+          tabs?.map((item) =>{
+            return (
+              <div>
+                <button 
+                onClick={()=> setCurrenttab(item)}
+                  key={item.id}
+                  style={{position:'relative', top:'1rem', cursor:'pointer'}}
+                  // className='px-2.5 p-1 rounded-[8px]'
+                  // style={{background : item === currenttab ? '#D3D5DB' : ''}}
+                  className={`${(item === currenttab) ? 'bg-color1 text-sidebar px-2.5 p-1 rounded-[8px]' : ''}`}
+                >
+                 {item}
+                </button>
+                </div>
+            )
+          })
+        }
+       
       </div>
       <header>
         <Chart 
@@ -59,10 +54,19 @@ function Barchart() {
           },
          
           legend:{
-            show:true,
+            show: true,
             position:'top',
-           
-          }
+            offsetY: -5,
+            offsetX: 500,
+          },
+          tooltip: {
+            fixed: {
+              enabled: false,
+              position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+              offsetY: 30,
+              offsetX: 60
+            }
+          } 
         }}
         />
       </header>

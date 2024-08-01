@@ -1,10 +1,12 @@
 import React from 'react'
 import { LogoutData } from './LogoutData/LogoutData'
 import styled from 'styled-components'
+import Navbar from '../../Components/Navbar'
 
 function Logout() {
   return (
     <Div className=' text-[14px] w-[100%]' >
+      <Navbar/>
       <div>
         <div className='text-lg border border-slate-200 pl-8 p-4 w-[100%]'>Activity Log</div>
         

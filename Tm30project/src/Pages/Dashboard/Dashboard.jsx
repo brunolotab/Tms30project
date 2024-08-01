@@ -1,10 +1,9 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar'
 import Rightsidebar from './Rightsidebar'
-// import ApexChart from './Barchart'
 import Barchart from './Charts/Barchart'
 import Donutpie from '../../SDonutpie'
-// import ApexCharts from 'apexcharts'
+import ApexChart from './Barchart'
 
 
 
@@ -85,6 +84,7 @@ function Dashboard() {
 
 
                     </div>
+                    {/* <div className='p-4'><ApexChart /></div> */}
                     <div className='p-4'><Barchart /></div>
                     <div className='grid grid-cols-2 w-[95%] text-[13px] h-[23rem] bg-[#ffff] mb-5 ml-7'>
                         <div className='w-[23rem] border border-slate-200   '>

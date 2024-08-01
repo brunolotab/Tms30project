@@ -4,7 +4,7 @@ import { PrimaryData } from './PrimaryData/PrimaryData'
 import ShowPages from '../../Components/ShowPages/ShowPages'
 import styled from 'styled-components'
 
-function PriRouting() {
+function PrimaryRouting() {
   return (
     <Div>
       <Navbar/>
@@ -41,7 +41,7 @@ function PriRouting() {
   )
 }
 
-export default PriRouting
+export default PrimaryRouting
 
 const Div = styled.div`
   tr:nth-child(odd) {

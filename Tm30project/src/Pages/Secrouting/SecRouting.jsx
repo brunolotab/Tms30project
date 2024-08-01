@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../Components/Navbar'
 import { SecondaryData } from './SecordaryData/SecondaryData'
 import styled from 'styled-components'
+import ShowPages from '../../Components/ShowPages/ShowPages'
 
 function SecRouting() {
   return (
@@ -11,30 +12,32 @@ function SecRouting() {
         <div className='font-bold text-lg pl-8'>Secondary Routing Configuration</div>
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Configuration</button></div>
       </div>
-      <div className='text-14  w-[100%] leading-8'>
-        <table>
-          <tr className=' w-[100%] border '>
-            <th className='w-[20%] pr-5'>SYSTEM ID</th>
-            <th className='w-[20%]'>NAME OF SCHEME</th>
-            <th className='w-[20%]'>DESCRIPTION</th>
-            <th className='w-[20%] pl-2'>BIN CONFIGURATION</th>
-            <th className='w-[20%] pr-20'>ACTION</th>
+      <div className='text-[14px] font-regular leading-5'>
+        <table className=' w-[100%] leading-9'>
+          <tr className='font-semiBoldFont text-left pl-4'>
+            <th className='pl-8'>SYSTEM ID</th>
+            <th>NAME OF SCHEME</th>
+            <th>DESCRIPTION</th>
+            <th>BIN CONFIGURATION</th>
+            <th>ACTION</th>
           </tr>
           {
             SecondaryData?.map((item,id) => {
               return (
-                <tr className='w-[100%]'>
-                  <td className='w-[20%] pl-14'>{item.SID}</td>
-                  <td className='w-[20%] pl-9'>{item.Name}</td>
-                  <td className='w-[20%] pl-14'>{item.Desc}</td>
-                  <td className='w-[20%] pl-11'>{item.Bin}</td>
-                  <td className='w-[20%] pl-65'>{item.Action}</td>
+                <tr >
+                  <td className='pl-8'>{item.SID}</td>
+                  <td>{item.Name}</td>
+                  <td>{item.Desc}</td>
+                  <td>{item.Bin}</td>
+                  <td>{item.Action}</td>
                 </tr>
               )
             })
           }
         </table>
         </div>
+      <ShowPages/>
+
     </Div>
   )
 }

@@ -49,13 +49,13 @@ export const SideData = [
     },
     {
         title: 'Primary Routing',
-        path : 'PriRouting',
+        path : 'Primary-Routing',
         icon: <BiBookOpen/>,
         indicator: <BiChevronRight/>
     },
     {
         title: 'Secondary Routing',
-        path : 'SecRouting',
+        path : 'Secondary-Routing',
         icon: <BiBookOpen/>,
         indicator: <BiChevronRight/>
     },
