@@ -8,7 +8,12 @@ function Navbar() {
   const path = window.location.pathname;
   console.log(path)
   const paths = path.split('/')
+  console.log(paths)
   const name = paths[1];
+  const value = name.split('-').join(' ')
+  console.log(value);
+  // const value1 = name.replace(/-/g, " "); this is same wth const value
+  // console.log(value1);
   
 
 
@@ -18,7 +23,7 @@ function Navbar() {
         <div className='bg-[#FEFEFE] border-slate-200 border p-4  flex justify-between items-center'>
             <div className='flex justify-around w-[15rem]'>
                 <div className='pl-1'>BigFoot</div>
-                <div className='ml-5'>{name}</div>
+                <div className='ml-5'>{value}</div>
             </div>
             <div className='flex gap-3 justify-evenly '>
                 <div><input type='text' className='rounded-[5px] bg-color1 p-[2px] px-[3px]' /></div>

@@ -80,7 +80,7 @@ export const SideData = [
  
     {
         title: 'Server Health',
-        path : 'health',
+        path : 'Server-Health',
         icon: <BiBookOpen/>,
         indicator: <BiChevronRight/>
     },
@@ -94,7 +94,7 @@ export const SideData = [
  
     {
         title: 'Notification Setting',
-        path : 'notification',
+        path : 'Notification-setting',
         icon: <BiBookOpen/>,
         indicator: <BiChevronRight/>
     },

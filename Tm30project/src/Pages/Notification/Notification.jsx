@@ -35,7 +35,7 @@ function Notification() {
     <div>
       <div><Navbar /></div>
       <div className='text-lg border-b p-4 pl-10'>Notification Settings</div>
-      <div className='flex justify-around items-center text-[13px] border'>
+      <div className='flex gap-[4rem] pl-8 items-center text-[13px] border'>
         {
           notifications?.map((item,id) => {
             return (
@@ -52,7 +52,7 @@ function Notification() {
        
       </div>
 
-      <div className='p-8'>
+      <div className='p-1'>
       {
           insert === 'TransactionRules' ? <div><TransactionRules /></div> : insert === 'SystemResource' ? <div><SystemResource /></div> : <div><Network /></div>
         }

@@ -43,9 +43,9 @@ function TmsApp() {
             <Route path='Secondary-Routing' element= {<SecRouting/>}/>
             <Route path='Bin' element= {<Bin/>}/>
             <Route path='logout' element= {<Logout/>}/>
-            <Route path='health' element= {<ServHealth/>}/>
+            <Route path='Server-Health' element= {<ServHealth/>}/>
             <Route path='licensing' element= {<LIcensing/>}/>
-            <Route path='notification' element= {<Notification/>}/>
+            <Route path='Notification-Setting' element= {<Notification/>}/>
             <Route path='setting' element= {<Settings/>}/>
         </Routes>
         </div>
