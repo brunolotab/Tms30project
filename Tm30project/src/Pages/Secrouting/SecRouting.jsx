@@ -3,8 +3,15 @@ import Navbar from '../../Components/Navbar'
 import { SecondaryData } from './SecordaryData/SecondaryData'
 import styled from 'styled-components'
 import ShowPages from '../../Components/ShowPages/ShowPages'
+import { useNavigate } from 'react-router-dom'
 
 function SecRouting() {
+
+  const Navigate = useNavigate()
+  const handleAction = (it) => {
+    // console.log(it);
+    Navigate(`/ActionData/${it}`)
+  }
   return (
     <Div>
       <Navbar/>
@@ -24,12 +31,12 @@ function SecRouting() {
           {
             SecondaryData?.map((item,id) => {
               return (
-                <tr >
+                <tr key={id}>
                   <td className='pl-8'>{item.SID}</td>
                   <td>{item.Name}</td>
                   <td>{item.Desc}</td>
                   <td>{item.Bin}</td>
-                  <td>{item.Action}</td>
+                  <td className='cursor-pointer'  onClick={() => handleAction(id)}>{item.Action}</td>
                 </tr>
               )
             })

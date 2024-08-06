@@ -8,13 +8,17 @@ function TransactionRules() {
   const[bordercolor, setBordercolor] = useState('Card scheme');
   return (
     <div className='pl-7 '>
-      <div className='flex gap-9 text-[13px] py-2'>
+       <div className='text-[14px]  py-2 pt-3 border-b leading-[1.5rem]'>
+        <div style={{fontFamily:'semiBoldFont'}}>Transaction Rule</div>
+        <div className='text-[13px]'>Set a notification trigger for each metrics</div>
+      </div>
+      <div className='flex gap-9 text-[13px] pt-2 border-b'>
         {
           sections?.map((item,id)=>{
             return (
               <div key={id}
               onClick={() => (setBordercolor(item))}
-              className='py-3'
+              className='py-3 cursor-pointer'
               style={{borderBottom: item === bordercolor? '1px solid#1B59F8' : ''}}
               >
 
@@ -24,6 +28,7 @@ function TransactionRules() {
           })
         }
       </div>
+     
       <div>
       { bordercolor === 'Card scheme' ? <div><CardScheme/></div> : <div><Terminal/></div> }
       </div>

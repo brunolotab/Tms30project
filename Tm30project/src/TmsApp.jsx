@@ -19,6 +19,7 @@ import ServHealth from './Pages/SerHealth/ServHealth'
 import LIcensing from './Pages/License/LIcensing'
 import Settings from './Pages/Settings/Settings'
 import PrimaryRouting from './Pages/Prirouting/PriRouting'
+import ActionData from './Pages/Secrouting/ActionInformation/ActionData'
 
 
 function TmsApp() {
@@ -26,21 +27,26 @@ function TmsApp() {
     <>
       
         <BrowserRouter>
-        {/* <Navbar/> */}
        <Sidebar/>
        
-       {/* <div style={{display:'grid', gridTemplateColumns: 'repeat(12, minmax(0, 1fr))', gap:'0px', gridAutoRows:'82vh', marginTop:'0px'}}><Sidebar/></div> */}
+      
         <div style={{paddingLeft:'13rem'}}>
         <Routes>
             <Route path='/' element= {<Dashboard/>}/>
             <Route path='Acquires' element= {<Acquires/>}/>
+            
             <Route path='Merchants' element= {<Merchants/>}/>
+            {/* <Route path='Merchant/:id' element= {<Merchants1james/>}/> */}
+            
+            
             <Route path='Terminals' element= {<Terminals/>}/>
             <Route path='Transactions' element= {<Transactions/>}/>
             <Route path='HSM' element= {<Hsm/>}/>
             <Route path='Processors' element= {<Processors/>}/>
             <Route path='Primary-Routing' element= {<PrimaryRouting/>}/>
             <Route path='Secondary-Routing' element= {<SecRouting/>}/>
+            <Route path='ActionData/:id' element= {<ActionData/>}/>
+            
             <Route path='Bin' element= {<Bin/>}/>
             <Route path='logout' element= {<Logout/>}/>
             <Route path='Server-Health' element= {<ServHealth/>}/>
