@@ -11,6 +11,7 @@ function Navbar() {
   console.log(paths)
   const name = paths[1];
   const value = name.split('-').join(' ')
+  // const value = paths.split('-').join(' ')
   console.log(value);
   // const value1 = name.replace(/-/g, " "); this is same wth const value
   // console.log(value1);

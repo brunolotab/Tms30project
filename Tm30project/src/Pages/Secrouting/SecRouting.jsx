@@ -11,6 +11,7 @@ function SecRouting() {
   const handleAction = (it) => {
     // console.log(it);
     Navigate(`/ActionData/${it}`)
+    // Navigate(`/ActionData/${it}`)
   }
   return (
     <Div>

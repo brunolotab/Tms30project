@@ -27,7 +27,7 @@ function TmServer1() {
         {
           server1?.map((item, id) => {
             return (
-              <div key={id} className=' bg-slate-500 p-4 w-[22rem] flex gap-6 items-center justify-between rounded-[8px]'>
+              <div key={id} className=' bg-[#e3e4ff] p-4 w-[22rem] flex gap-6 items-center justify-between rounded-[8px]'>
                 <div className='flex items-center gap-4'>
                   <div>
                     {item.icon}

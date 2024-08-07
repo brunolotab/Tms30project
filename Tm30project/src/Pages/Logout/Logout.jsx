@@ -11,14 +11,15 @@ function Logout() {
         <div className='text-lg border border-slate-200 pl-8 p-4 w-[100%]'>Activity Log</div>
         
         <div className='flex justify-between items-center w-[100%] py-5 p-8 border border-slate-200'>
-          <div className=' flex items-center w-[16rem] border-slate-200'> 
+          <div className=' flex items-center w-[16rem] gap-5 border-slate-200'> 
             <div>
               <div>Start Date</div>
-              <div>25/10/2022</div>
+              <div className='border p-1 rounded-[6px] w-[12rem] mt-1'>25/10/2022</div>
             </div>
+            <div className='pt-4'>{'-'}</div>
             <div>
               <div>Start Date</div>
-              <div>25/10/2022</div>
+              <div className='border p-1 rounded-[6px] w-[12rem] mt-1'>25/10/2022</div>
             </div>
           </div>
 

@@ -7,17 +7,9 @@ import Avatar from '../assets/Icons/Avatar.jpg'
 // import { TfiPieChart } from 'react-icons/tfi'
 import styled from 'styled-components'
 import { SideData } from './SideBar/SidebarData'
-// import { ContextApi } from '../ContextApi/ContextApi'
 
 function Sidebar() {
 
-    // const{ handletitle} = useContext[ContextApi];
-  // const[title, SetTitle] = useState('dashbord');
-  // const handletitle = (id)=> {
-  //     if(id){
-  //       SetTitle(title.id)
-  //     }
-  // }
 
   const Sidedata = SideData;
 
