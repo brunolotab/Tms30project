@@ -40,9 +40,9 @@ function ServHealth() {
                 tmsServer?.map((item, id) => {
                   return (
                     <div key={id}
-                      className='my-[1.4rem] p-1 uppercase'
+                      className='my-[1.2rem] p-1 py-3 uppercase rounded-r-[8px] '
                       onClick={() => (setTabs(item))}
-                      style={{ background: item === tabs ? '#1b59f8' : '' }}
+                      style={{ background: item === tabs ? '#1b59f8' : '', borderLeft: item === tabs? '4px solid #0a44d8' : '' }}
                     >
                       {item}<span>icon</span>
                     </div>

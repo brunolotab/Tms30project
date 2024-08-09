@@ -10,12 +10,12 @@ function Bin() {
       <div>
         <Navbar />
         <div className='flex justify-between align-middle bg-white w-[97%] p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
-          <div className='font-bold text-xl'>Bin</div>
+          <div className=' text-xl pl-3'  style={{fontFamily:'semiBoldFont'}}>Bin</div>
           <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Bin</button></div>
         </div>
-        <div className='text-[14px] font-regular w-[98%] leading-5' style={{fontFamily:'semiBoldFont'}}>
+        <div className='text-[13px] font-regular w-[98%] leading-5 pl-3'>
           <table className=' w-[97%] leading-9'>
-            <tr className='font-semiBoldFont text-left pl-4'>
+            <tr className='font-semiBoldFont text-left pl-4'  style={{fontFamily:'semiBoldFont'}}>
               <th className='pl-6'>BIN 1D</th>
               <th>BIN NAME</th>
               <th>BIN </th>

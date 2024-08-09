@@ -13,9 +13,9 @@ function Transactions() {
         <div className='font-bold text-xl'>Transactions</div>
         <div><button className=' p-6 py-2 rounded-[4px] border border-blue-800 text-blue-700 font-semibold text-[13px] '> Filter By</button></div>
       </div>
-      <div className='text-[14px] leading-[2.6rem] w-[100%] overflow-auto' style={{fontFamily:'mediumFont'}}>
+      <div className='text-[13px] leading-[2.6rem] w-[100%] overflow-auto' >
         <table className='w-[120%]  py-9'>
-          <tr className='text-left'>
+          <tr className='text-left'  style={{fontFamily:'semiBoldFont'}}>
             <th className='pl-7'>TRANSACTION ID</th>
             <th>REF.NO</th>
             <th>PAN</th>

@@ -12,9 +12,9 @@ function Processors() {
         <div className='text-[20px]' style={{fontFamily:'semiBoldFont'}}>Processors</div>
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Processors</button></div>
       </div>
-      <div className='text-[14px] w-[100%] leading-5' style={{fontFamily:'semiBoldFont'}}>
+      <div className='text-[13px] w-[100%] leading-5' >
         <table className='leading-10 w-[100%] ' >
-          <tr className='text-left pl-9'>
+          <tr className='text-left pl-9' style={{fontFamily:'semiBoldFont'}}>
             <th className='pl-6'>PROCESSOR 1D</th>
             <th>PROCESSOR NAME</th>
             <th>PROCESSOR IP ADRESS</th>

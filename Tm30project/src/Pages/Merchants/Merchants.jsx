@@ -14,7 +14,7 @@ function Merchants() {
         <div className='font-bold text-xl'>Merchants</div>
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Merchant</button></div>
       </div>
-      <div className='text-[14px] w-[100%] overflow-auto'>
+      <div className='text-[13px] w-[100%] overflow-auto'>
         <table className='leading-6 w-[120%] h-[100vh]'>
           <tr className=' bg-color2 ' style={{ fontFamily: 'semiBoldFont' }}>
             <th>MERCHANTS NAME </th>

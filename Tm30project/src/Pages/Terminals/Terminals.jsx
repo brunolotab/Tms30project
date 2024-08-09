@@ -19,9 +19,9 @@ function Terminals() {
           <button className='border border-sidebar rounded-[4px] p-2 w-25 text-sidebar bg-blue-500'> Apply</button>
         </div>
       </div>
-      <div className='text-[14px] leading-[2.6rem] w-[100%] font-medium overflow-auto'>
+      <div className='text-[13px] leading-[2.6rem] w-[100%] overflow-auto'>
         <table className=' w-[120%]'>
-          <tr>
+          <tr  style={{fontFamily:'semiBoldFont'}}>
             <th className='pl-4'>TERMINAL ID</th>
             <th>TYPE</th>
             <th>SERIAL NUMBER</th>

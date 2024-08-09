@@ -10,9 +10,9 @@ function Acquires() {
         <div className='font-bold text-xl'>Acquirers</div>
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Acquires</button></div>
       </div>
-      <div className='text-[14px]'>
-        <table className='leading-6 w-[100vw] h-[100vh] font-semibold'>
-          <tr className=' bg-color2 '>
+      <div className='text-[13px]'>
+        <table className='leading-6 w-[100vw] h-[100vh]'>
+          <tr className=' bg-color2 '  style={{fontFamily:'semiBoldFont'}}>
             <th>ACQUIRER NAME </th>
             <th>ACQUIRER ID </th>
             <th>TMS ID </th>

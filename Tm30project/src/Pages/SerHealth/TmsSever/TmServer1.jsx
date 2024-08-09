@@ -1,8 +1,11 @@
 import React from 'react'
 import { server1 } from './ServerPanel/Server1Panel'
+import restart from '../../../assets/health/restart.png'
+import left from '../../../assets/health/Left.png'
+import trash from '../../../assets/health/Trash 2.png'
 
 function TmServer1() {
-  const connect = [{ name: 'FIREWALL', icon: 'a' }, { name: ' RESTART', icon: 'b' }, { name: 'DISCONNECT', icon: 'c' }]
+  const connect = [{ name: 'FIREWALL', icon: left}, { name: ' RESTART', icon: restart  }, { name: 'DISCONNECT', icon: trash }]
   return (
     <div>
       <div className='p-6 flex justify-between items-center'>
@@ -14,8 +17,9 @@ function TmServer1() {
           {
             connect?.map((item, id) => {
               return (
-                <div key={id} className='flex items-center border'>
-                  <div>{item.icon}<span>{item.name}</span></div>
+                <div key={id} className='flex items-center gap-5'>
+                  <div><img src={item.icon}/></div>
+                  <div>{item.name}</div>
 
                 </div>
               )
@@ -23,23 +27,23 @@ function TmServer1() {
           }
         </div>
       </div>
-      <div className='grid grid-cols-2 gap-5 w-[90%] pl-[4rem]'>
+      <div className='grid grid-cols-2 gap-8 w-[90%] pl-[4rem] text-[13px]'>
         {
           server1?.map((item, id) => {
             return (
-              <div key={id} className=' bg-[#e3e4ff] p-4 w-[22rem] flex gap-6 items-center justify-between rounded-[8px]'>
-                <div className='flex items-center gap-4'>
+              <div key={id} className=' bg-[#e3e4ff] p-4 w-[22rem] flex items-center justify-between rounded-[8px]'>
+                <div className='flex items-center '>
                   <div>
-                    {item.icon}
+                    <img src={item.icon}/>
                   </div>
                   <div>
-                    <div>{item.tag}</div>
+                    <div className='w-[8rem] text-[12px]'>{item.tag}</div>
                     <div>{item.used}</div>
                   </div>
                 </div>
-                <div style={{ display: 'flex', flexDirection: 'column', justifyItems: 'flexend' }}>
+                <div style={{ display: 'flex', flexDirection: 'column'}}>
                   <div className='float-right'>{item.total}</div>
-                  <div>{item.img}</div>
+                  <div className='w-[9rem]'><img src={item.img}/></div>
                 </div>
               </div>
             )
