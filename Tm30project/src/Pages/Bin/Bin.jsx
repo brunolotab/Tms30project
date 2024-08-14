@@ -37,7 +37,15 @@ function Bin() {
             }
           </table>
         </div>
-        <div className='mt-4 pr-8'><ShowPages/></div>
+        {/* <div className='mt-4 pr-8'><ShowPages/></div> */}
+        <div className='pl-[15rem] pr-[5rem]'>
+          <Paging
+            postperpage={postperpage}
+            setCurrentpage={setCurrentpage}
+            currentpage={currentpage}
+            data={Datatransaction}
+          />
+        </div>
       </div>
     </Div>
   )

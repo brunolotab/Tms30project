@@ -19,18 +19,7 @@ function Sidebar() {
         <div className='bg-white border border-slate-200 w-[13rem]  text-center text-[15px] p-4 text-color4' style={{fontFamily:'semiBoldFont'}}>
           <div className='pr-14 flex justify-center items-center  '><div className='image'><img src={Avatar} alt=''/></div><span>BigFoot</span> </div>
           <div className='  leading-[3.0rem] p-4  pl-2 '>
-            {/* <NavLink to={'/'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Dashboard</div></NavLink>
-            <NavLink to={'Acquires'}><div className='info'><BiChevronRight className='chevron' /><FiShoppingBag style={{ marginRight: '8px' }} /> Acquires</div></NavLink>
-            <NavLink to={'Merchants'}><div className='info'><BiChevronRight className='chevron' /><TfiPieChart style={{ marginRight: '8px' }} />Merchants</div></NavLink>
-            <NavLink to={'Terminals'}><div className='info'><BiChevronRight className='chevron' />< TiFolder style={{ marginRight: '8px' }} />Terminals</div></NavLink>
-            <NavLink to={'transactions'}><div className='info'><BiChevronRight className='chevron' /><BiBookOpen style={{ marginRight: '8px' }} />Transactions</div></NavLink>
-            <NavLink to={'HSM'}><div className='info'><BiChevronRight className='chevron' /><BiBookOpen style={{ marginRight: '8px' }} />HSM</div></NavLink>
-            <NavLink to={'Processors'}><div className='info'><BiChevronRight className='chevron' />< TiFolder style={{ marginRight: '8px' }} />Processors</div></NavLink>
-            <NavLink to={'PriRouting'}><div className='info'><BiChevronRight className='chevron' /><BiBookOpen style={{ marginRight: '8px' }} />Primary Routing</div></NavLink>
-            <NavLink to={'SecRouting'}><div className='info'><BiChevronRight className='chevron' /><BiBookOpen style={{ marginRight: '8px' }} />Secondary Routing</div></NavLink>
-            <NavLink to={'Bin'}><div className='info'><BiChevronRight className='chevron' /><BiBookOpen style={{ marginRight: '8px' }} />Bin</div></NavLink>
-            <NavLink to={'logout'}><div className='info'><BiChevronRight className='chevron' /><BiBookOpen style={{ marginRight: '8px' }} />Active logout</div></NavLink>
-           */}
+          
           {
             Sidedata.map((item) => {
               return (

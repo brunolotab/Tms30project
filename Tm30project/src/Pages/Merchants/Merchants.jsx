@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import Navbar from '../../Components/Navbar'
 import { DataMerchants } from './DataMachant/Datamerchants'
+import PagesMerchants from './PagesMerchants';
 
 
 function Merchants() {
+  const[currentpage, setCurrentpage] = useState(1);
+  const[postperpage, setPostperpage] = useState(5);
 
+  const lastpostindex = currentpage * postperpage
+  const firstpostindex = lastpostindex - postperpage;
+  const currentpost = DataMerchants.slice(firstpostindex, lastpostindex);
   return (
 
     <Div >
@@ -26,7 +32,7 @@ function Merchants() {
             <th>ENABLE ALL TRANSACTION TYPES </th>
           </tr>
           {
-            DataMerchants.map((item,id) => {
+            currentpost.map((item,id) => {
               return (
                 <tr key={id}>
                   <td>{item.name}</td>
@@ -42,7 +48,13 @@ function Merchants() {
           }
         </table>
       </div>
-
+      <div className='pl-[16rem] pr-[4rem] mb-6'><PagesMerchants 
+         postperpage={postperpage}
+         setCurrentpage ={setCurrentpage}
+         currentpage = {currentpage}
+         data ={DataMerchants}
+      />
+      </div>
 
     </Div>
   )
