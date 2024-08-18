@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { SecondaryData } from './SecordaryData/SecondaryData'
 import styled from 'styled-components'
-import ShowPages from '../../Components/ShowPages/ShowPages'
+// import ShowPages from '../../Components/ShowPages/ShowPages'
 import { useNavigate } from 'react-router-dom'
+import Paging from '../../Components/ShowPages/Paging'
+// import { ContextAPI } from '../../Components/ContextApi/PageContextProvider'
+// import { PagesContext } from '../../Components/ContextApi/PageContextProvider'
 
 function SecRouting() {
+  // const {currentpage} = useContext(ContextAPI);
+  // console.log(currentpage);
+
+  const[currentpage, setCurrentpage] = useState(1);
+  const[postperpage, setPostperpage] = useState(5);
+
+  const lastpostindex = currentpage * postperpage
+  const firstpostindex = lastpostindex - postperpage;
+  const currentpost = SecondaryData.slice(firstpostindex, lastpostindex);
+
+
 
   const Navigate = useNavigate()
   const handleAction = (it) => {
@@ -17,11 +31,11 @@ function SecRouting() {
     <Div>
       <Navbar/>
       <div className='flex justify-between align-middle bg-white p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
-        <div className='font-bold text-lg pl-8'>Secondary Routing Configuration</div>
+        <div className='font-bold text-lg pl-2'>Secondary Routing Configuration</div>
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Configuration</button></div>
       </div>
-      <div className='text-[14px] font-regular leading-5'>
-        <table className=' w-[100%] leading-9'>
+      <div className='text-[14px] font-regular '>
+        <table className=' w-[100%] leading-3 h-[80vh]'>
           <tr className='font-semiBoldFont text-left pl-4'>
             <th className='pl-8'>SYSTEM ID</th>
             <th>NAME OF SCHEME</th>
@@ -30,7 +44,7 @@ function SecRouting() {
             <th>ACTION</th>
           </tr>
           {
-            SecondaryData?.map((item,id) => {
+            currentpost?.map((item,id) => {
               return (
                 <tr key={id}>
                   <td className='pl-8'>{item.SID}</td>
@@ -44,7 +58,15 @@ function SecRouting() {
           }
         </table>
         </div>
-      <ShowPages/>
+      {/* <ShowPages/> */}
+      <div className='pl-[16rem] pr-[4rem] my-9'>
+      <Paging
+      postperpage={postperpage}
+      setCurrentpage ={setCurrentpage}
+      currentpage = {currentpage}
+      data ={SecondaryData}
+      />
+      </div>
 
     </Div>
   )

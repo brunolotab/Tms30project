@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 // import { DataMerchants } from './DataMachant/Datamerchants'
 import styled from 'styled-components';
+import { PagesContext } from '../ContextApi/PageContextProvider';
 
-function Paging({ postperpage, currentpage, data, setCurrentpage }) {
+// function Paging({ postperpage, currentpage, data, setCurrentpage }) {
+function Paging({ data }) {
+
+    const {postperpage,setCurrentpage, currentpage } = useContext[PagesContext]
+
   const totalpost = data.length;
   let pages = [];
 

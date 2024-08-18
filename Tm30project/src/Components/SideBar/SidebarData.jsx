@@ -86,8 +86,8 @@ export const SideData = [
     },
  
     {
-        title: 'Liecencing',
-        path : 'licensing',
+        title: 'Licencing',
+        path : 'licencing',
         icon: <BiBookOpen/>,
         indicator: <BiChevronRight/>
     },

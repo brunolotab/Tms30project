@@ -21,10 +21,10 @@ function PrimaryRouting() {
         <div className='font-bold text-xl pl-2'>Routing Configuration</div>
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Configuration</button></div>
       </div>
-      <div className='text-[14px] font-regular w-[100%] leading-5'>
+      <div className='text-[14px] font-regular w-[100%] leading-5 '>
         <table className=' w-[100%] leading-9 h-[60vh] '>
           <tr className='font-semiBoldFont text-left pl-4'>
-            <th className='pl-[4rem]'>NAME</th>
+            <th className='pl-[3rem]'>NAME</th>
             <th>DESCRIPTION</th>
             <th>PARAMETER</th>
             <th>SYSTEM ID</th>
@@ -34,7 +34,7 @@ function PrimaryRouting() {
             currentpost?.map((item) => {
               return (
                 <tr key={item.id} >
-                  <td className='pl-[4rem]'>{item.Name}</td>
+                  <td className='pl-[3rem]'>{item.Name}</td>
                   <td>{item.Desc}</td>
                   <td>{item.Parameter}</td>
                   <td>{item.SID}</td>

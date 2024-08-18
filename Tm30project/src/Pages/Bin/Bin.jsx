@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { BinData } from './BinData/BinData'
 import styled from 'styled-components'
 import ShowPages from '../../Components/ShowPages/ShowPages'
+import Paging from '../../Components/ShowPages/Paging'
 
 function Bin() {
+  const[currentpage, setCurrentpage] = useState(1);
+  const[postperpage, setPostperpage] = useState(5);
+
+  const lastpostindex = currentpage * postperpage
+  const firstpostindex = lastpostindex - postperpage;
+  const currentpost = BinData.slice(firstpostindex, lastpostindex);
+
   return (
     <Div >
       <div>
@@ -14,7 +22,7 @@ function Bin() {
           <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Bin</button></div>
         </div>
         <div className='text-[13px] font-regular w-[98%] leading-5 pl-3'>
-          <table className=' w-[97%] leading-9'>
+          <table className=' w-[97%] leading-9 h-[80vh]'>
             <tr className='font-semiBoldFont text-left pl-4'  style={{fontFamily:'semiBoldFont'}}>
               <th className='pl-6'>BIN 1D</th>
               <th>BIN NAME</th>
@@ -23,7 +31,7 @@ function Bin() {
               <th>PROCESSOR</th>
             </tr>
             {
-              BinData?.map((item,id) =>{
+              currentpost?.map((item,id) =>{
                 return (
                   <tr key={id}>
                     <td className='pl-6'>{item.Id}</td>
@@ -38,12 +46,12 @@ function Bin() {
           </table>
         </div>
         {/* <div className='mt-4 pr-8'><ShowPages/></div> */}
-        <div className='pl-[15rem] pr-[5rem]'>
+        <div className='pl-[15rem] pr-[5rem] mb-6'>
           <Paging
             postperpage={postperpage}
             setCurrentpage={setCurrentpage}
             currentpage={currentpage}
-            data={Datatransaction}
+            data={BinData}
           />
         </div>
       </div>
