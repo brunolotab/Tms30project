@@ -16,21 +16,21 @@ function Sidebar() {
   return (
     <Aiv>
       <div className='m-0 p-0 fixed top-0 left-0  z-[999] h-[100%] overflow-y-auto overflow-x-hidden'>
-        <div className='bg-white border border-slate-200 w-[13rem]  text-center text-[15px] p-4 text-color4' style={{fontFamily:'semiBoldFont'}}>
-          <div className='pr-14 flex justify-center items-center  '><div className='image'><img src={Avatar} alt=''/></div><span>BigFoot</span> </div>
+        <div className='bg-white border border-slate-200 w-[13rem]  text-center text-[15px] p-4 text-color4' style={{ fontFamily: 'semiBoldFont' }}>
+          <div className='pr-14 flex justify-center items-center  '><div className='image'><img src={Avatar} alt='' /></div><span>BigFoot</span> </div>
           <div className='  leading-[3.0rem] p-4  pl-2 '>
-          
-          {
-            Sidedata.map((item) => {
-              return (
-                <div key={item.id}>
-                  <NavLink to={item.path}>
-                    <div className='info'><div className='chevron'>{item.indicator}</div><div style={{ marginRight: '8px' }}>{item.icon}</div> {item.title}</div>
-                  </NavLink>
-                </div>
-              )
-            })
-          }
+
+            {
+              Sidedata.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <NavLink to={item.path}>
+                      <div className='info'><div className='chevron'>{item.indicator}</div><div style={{ marginRight: '8px' }}>{item.icon}</div> {item.title}</div>
+                    </NavLink>
+                  </div>
+                )
+              })
+            }
           </div>
         </div>
       </div>

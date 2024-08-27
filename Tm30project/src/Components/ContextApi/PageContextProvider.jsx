@@ -1,32 +1,26 @@
-// import React, { createContext, useState } from 'react'
+import React, { createContext, useState } from 'react'
 
 
-// export const ContextAPI = createContext()
+export const ContextAPI = createContext()
 
-// function PageContextProvider ( {Children}) {
+function PageContextProvider({ children }) {
 
-//     const[currentpage, setCurrentpage] = useState(1);
-//     const[postperpage, setPostperpage] = useState(5);
-  
-//     const lastpostindex = currentpage * postperpage
-//     const firstpostindex = lastpostindex - postperpage;
-//     console.log(firstpostindex);
-//     console.log(currentpage);
-//     console.log(lastpostindex);
+    const [currentpage, setCurrentpage] = useState(1);
+    const [postperpage, setPostperpage] = useState(5);
 
-//   return (
-//     <ContextAPI.Provider value={{postperpage, setCurrentpage, currentpage, firstpostindex, lastpostindex}}>
-//         {Children}
-//     </ContextAPI.Provider>
-//   )
-// }
+    const lastpostindex = currentpage * postperpage
+    const firstpostindex = lastpostindex - postperpage;
+    console.log(firstpostindex);
+    console.log(currentpage);
+    console.log(lastpostindex);
 
-// export default PageContextProvider
+    return (
+        <ContextAPI.Provider value={{ postperpage, setCurrentpage, currentpage, firstpostindex, lastpostindex }}>
+            {children}
+        </ContextAPI.Provider>
+    )
+}
+
+export default PageContextProvider
 
 
-// // postperpage={postperpage}
-// // setCurrentpage ={setCurrentpage}
-// // currentpage = {currentpage}
-// // data ={DataMerchants}
-// // />
-// // </div>

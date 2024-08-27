@@ -2,11 +2,9 @@ import React, { useContext, useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { SecondaryData } from './SecordaryData/SecondaryData'
 import styled from 'styled-components'
-// import ShowPages from '../../Components/ShowPages/ShowPages'
 import { useNavigate } from 'react-router-dom'
 import Paging from '../../Components/ShowPages/Paging'
 // import { ContextAPI } from '../../Components/ContextApi/PageContextProvider'
-// import { PagesContext } from '../../Components/ContextApi/PageContextProvider'
 
 function SecRouting() {
   // const {currentpage} = useContext(ContextAPI);
@@ -64,6 +62,7 @@ function SecRouting() {
       postperpage={postperpage}
       setCurrentpage ={setCurrentpage}
       currentpage = {currentpage}
+      setPostperpage = { setPostperpage}
       data ={SecondaryData}
       />
       </div>
