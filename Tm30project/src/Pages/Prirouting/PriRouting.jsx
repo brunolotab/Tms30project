@@ -22,7 +22,7 @@ function PrimaryRouting() {
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Configuration</button></div>
       </div>
       <div className='text-[14px] font-regular w-[100%] leading-5 '>
-        <table className=' w-[100%] leading-9 h-[60vh] '>
+        <table className=' w-[100%] leading-9  '>
           <tr className='font-semiBoldFont text-left pl-4'>
             <th className='pl-[3rem]'>NAME</th>
             <th>DESCRIPTION</th>
@@ -48,6 +48,7 @@ function PrimaryRouting() {
       {/* <ShowPages/> */}
       <div className='pl-[16rem] pr-[4rem] my-9'> <Paging
       postperpage={postperpage}
+      setPostperpage={setPostperpage}
       setCurrentpage ={setCurrentpage}
       currentpage = {currentpage}
       data ={PrimaryData}
@@ -70,6 +71,9 @@ const Div = styled.div`
   tr:nth-child(odd) {
     background-color: #fafafa;
     /* width: 7rem; */
+  }
+  th, td {
+    height: 4rem;
   }
   
   `

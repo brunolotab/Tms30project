@@ -22,7 +22,7 @@ function Bin() {
           <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Bin</button></div>
         </div>
         <div className='text-[13px] font-regular w-[98%] leading-5 pl-3'>
-          <table className=' w-[97%] leading-9 h-[80vh]'>
+          <table className=' w-[97%] leading-9'>
             <tr className='font-semiBoldFont text-left pl-4'  style={{fontFamily:'semiBoldFont'}}>
               <th className='pl-6'>BIN 1D</th>
               <th>BIN NAME</th>
@@ -49,6 +49,7 @@ function Bin() {
         <div className='pl-[15rem] pr-[5rem] mb-6'>
           <Paging
             postperpage={postperpage}
+            setPostperpage={setPostperpage}
             setCurrentpage={setCurrentpage}
             currentpage={currentpage}
             data={BinData}
@@ -65,6 +66,9 @@ const Div = styled.div`
   tr:nth-child(odd) {
     background-color: #fafafa;
     /* width: 7rem; */
+  }
+  th, td {
+    height: 4rem;
   }
   
   `

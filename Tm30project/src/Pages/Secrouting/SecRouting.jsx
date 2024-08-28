@@ -33,7 +33,7 @@ function SecRouting() {
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Configuration</button></div>
       </div>
       <div className='text-[14px] font-regular '>
-        <table className=' w-[100%] leading-3 h-[80vh]'>
+        <table className=' w-[100%] leading-3 '>
           <tr className='font-semiBoldFont text-left pl-4'>
             <th className='pl-8'>SYSTEM ID</th>
             <th>NAME OF SCHEME</th>
@@ -77,6 +77,9 @@ const Div = styled.div`
   tr:nth-child(odd) {
     background-color: #fafafa;
     /* width: 7rem; */
+  }
+  th, td {
+    height: 4rem;
   }
   
   `

@@ -13,7 +13,7 @@ function Processors() {
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Processors</button></div>
       </div>
       <div className='text-[13px] w-[100%] leading-5 pl-3' >
-        <table className='leading-10 w-[100%] h-[40vh] ' >
+        <table className='leading-10 w-[100%] ' >
           <tr className='text-left pl-9' style={{fontFamily:'semiBoldFont'}}>
             <th className='pl-6'>PROCESSOR 1D</th>
             <th>PROCESSOR NAME</th>
@@ -49,6 +49,9 @@ const Div = styled.div`
   tr:nth-child(odd) {
     background-color: #fafafa;
     /* width: 7rem; */
+  }
+  th, td {
+    height: 4rem;
   }
  
 `

@@ -23,7 +23,7 @@ function Transactions() {
         <div><button className=' p-6 py-2 rounded-[4px] border border-blue-800 text-blue-700 font-semibold text-[13px] '> Filter By</button></div>
       </div>
       <div className='text-[13px] leading-[2.6rem] w-[100%] overflow-auto' >
-        <table className='w-[120%] h-[100vh] py-9'>
+        <table className='w-[120%]  py-9'>
           <tr className='text-left' style={{ fontFamily: 'semiBoldFont' }}>
             <th className='pl-7'>TRANSACTION ID</th>
             <th>REF.NO</th>
@@ -59,12 +59,12 @@ function Transactions() {
           }
         </table>
       </div>
-      <div className='flex justify-between  items-center px-5 mt-8 w-[100%]'>
+      <div className='flex   my-8 w-[110%]'>
         <div><Apply /></div>
-        {/* <div><ShowPages/></div> */}
-        <div className='pl-[15rem] pr-[5rem]'>
+        <div className='pl-[8rem] pr-[3rem]'>
           <Paging
             postperpage={postperpage}
+            setPostperpage={setPostperpage}
             setCurrentpage={setCurrentpage}
             currentpage={currentpage}
             data={Datatransaction}
@@ -81,5 +81,8 @@ const Div = styled.div`
    tr:nth-child(even) {
     background-color: #fafafa;
     /* width: 7rem; */
+  }
+  th, td {
+    height: 4rem;
   }
 `

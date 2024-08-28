@@ -82,4 +82,7 @@ const Div = styled.div`
     font-size: 14px;
     border: 1px solid red;
   } */
+    th, td {
+    height: 4rem;
+  }
   `
