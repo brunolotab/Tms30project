@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import Navbar from '../../Components/Navbar'
 import { DataMerchants } from './DataMachant/Datamerchants'
-import PagesMerchants from './PagesMerchants';
+// import PagesMerchants from './PagesMerchants';
+import Paging from '../../Components/ShowPages/Paging';
 
 
 function Merchants() {
@@ -21,35 +22,38 @@ function Merchants() {
         <div><button className='bg-color1 p-6 py-2 rounded-[10px] text-sidebar font-bold text-[13px] '> + Add New Merchant</button></div>
       </div>
       <div className='text-[13px] w-[100%] overflow-auto'>
-        <table className='leading-6 w-[120%] h-[100vh]'>
-          <tr className=' bg-color2 ' style={{ fontFamily: 'semiBoldFont' }}>
-            <th>MERCHANTS NAME </th>
+        <table className='leading-6 w-[120%]'>
+          <tr className=' bg-color2 text-left' style={{ fontFamily: 'semiBoldFont' }}>
+            <th className='pl-[4rem]'>MERCHANTS NAME </th>
             <th>MERCHANTS ID </th>
             <th>TMS ID </th>
-            <th>MERCHANT ID </th>
+            <th>ACQUIER ID </th>
             <th>EMAIL ADDRESS </th>
-            <th>CBN CODE </th>
-            <th>ENABLE ALL TRANSACTION TYPES </th>
+            <th>LGA </th>
+            <th>COUNTRY CODE </th>
+            <th>ENABLE ALL TRANS. TYPES </th>
           </tr>
           {
             currentpost.map((item,id) => {
               return (
                 <tr key={id}>
-                  <td>{item.name}</td>
+                  <td className='pl-[4rem]'>{item.name}</td>
                   <td>{item.MID}</td>
                   <td>{item.Tid}</td>
-                  <td>{item.MerId}</td>
+                  <td>{item.AcqId}</td>
                   <td>{item.Email}</td>
-                  <td>{item.code}</td>
-                  <td >{item.type}</td>
+                  <td>{item.LGA}</td>
+                  <td >{item.code}</td>
+                  <td className='pl-14'><button>d</button></td>
                 </tr>
               )
             })
           }
         </table>
       </div>
-      <div className='pl-[16rem] pr-[4rem] mb-6'><PagesMerchants 
+      <div className='pl-[13rem] pr-[4rem] mb-6'><Paging 
          postperpage={postperpage}
+         setPostperpage={setPostperpage}
          setCurrentpage ={setCurrentpage}
          currentpage = {currentpage}
          data ={DataMerchants}
@@ -63,12 +67,15 @@ function Merchants() {
 export default Merchants
 
 const Div = styled.div`
-  td {
+  /* td {
     text-align: center;
-  }
+  } */
   tr:nth-child(odd) {
     background-color: #fafafa;
     /* background-color: #d2d4da; */
+  }
+  th, td {
+    height: 4rem;
   }
  
 `

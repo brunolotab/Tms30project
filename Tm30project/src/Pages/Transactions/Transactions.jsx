@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { Datatransaction } from './DataTransaction/Datatransaction'
 import styled from 'styled-components';
-import ShowPages from '../../Components/ShowPages/ShowPages';
+// import ShowPages from '../../Components/ShowPages/ShowPages';
 import Apply from '../../Components/ApplyButton/Apply';
 import Paging from '../../Components/ShowPages/Paging';
 

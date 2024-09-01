@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { PrimaryData } from './PrimaryData/PrimaryData'
-import ShowPages from '../../Components/ShowPages/ShowPages'
+// import ShowPages from '../../Components/ShowPages/ShowPages'
 import styled from 'styled-components'
 import Paging from '../../Components/ShowPages/Paging'
 

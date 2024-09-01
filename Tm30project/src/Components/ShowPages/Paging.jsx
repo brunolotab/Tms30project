@@ -45,29 +45,11 @@ function Paging({ postperpage, currentpage, data, setCurrentpage, setPostperpage
 
                         }
                     </div>
-
-
-                    {/* <div>{postperpage} <button onClick={()=> setToggle(!toggle)}>{toggle? '<' : 
-                <div>
-                {
-                    tabs.map((page, i) => {
-                        return (
-                            <div key={i}
-                                style={{ cursor: 'pointer', display: 'flex', gap: '9px' }}
-                            >
-                                <div onClick={() => setPostperpage(page)} className={page === postperpage ? 'inactive' : ''}>{page}</div>
-                            </div>
-                        )
-                    })
-                }
                 </div>
-                }</button></div> */}
-
-                </div>
-                <div className='text-[15px] w-[19rem] text-neutral-500'>Showing 1 to {postperpage} of 15 entries</div>
+                <div className='text-[15px] w-[19rem] text-neutral-500'>Showing 1 to {postperpage} of {totalpost} entries</div>
                 <div className='flex gap-4 w-[20rem]'>
                     <div><button onClick={handleprev} className={currentpage === 1 ? '' : 'active'}> prev</button></div>
-                    <div className='flex flex-wrap justify-center '>
+                    <div className='flex justify-center '>
                         {
                             pages?.map((item, i) => {
                                 return (

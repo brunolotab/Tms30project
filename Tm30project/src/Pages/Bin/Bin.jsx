@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { BinData } from './BinData/BinData'
 import styled from 'styled-components'
-import ShowPages from '../../Components/ShowPages/ShowPages'
+// import ShowPages from '../../Components/ShowPages/ShowPages'
 import Paging from '../../Components/ShowPages/Paging'
 
 function Bin() {
