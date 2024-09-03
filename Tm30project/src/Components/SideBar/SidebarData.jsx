@@ -7,7 +7,7 @@ import { TiFolder } from "react-icons/ti";
 export const SideData = [
     {
         title: 'Dashboard',
-        path : '/',
+        path : 'dashboard',
         icon: <TfiPieChart/>,
         indicator: <BiChevronRight/>
     },

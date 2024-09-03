@@ -40,7 +40,7 @@ function ServHealth() {
                 tmsServer?.map((item, id) => {
                   return (
                     <div key={id}
-                      className='my-[1.2rem] p-1 py-3 uppercase rounded-r-[8px] '
+                      className='my-[1.2rem] p-1 py-3 uppercase rounded-r-[8px] cursor-pointer'
                       onClick={() => (setTabs(item))}
                       style={{ background: item === tabs ? '#1b59f8' : '', borderLeft: item === tabs? '4px solid #0a44d8' : '' }}
                     >
@@ -58,7 +58,7 @@ function ServHealth() {
                   serverInformation?.map((item, id) => {
                     return (
                       <div key={id}
-                      className='uppercase rounded-[8px] p-1' 
+                      className='uppercase rounded-[8px] p-1 cursor-pointer' 
                       onClick={() => (setTab(item))}
                       style={{ border: item === tab ? ' 1px solid#1b59f8' : '' }}
                       >

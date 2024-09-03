@@ -32,7 +32,7 @@ function TmsApp() {
       
         <div style={{paddingLeft:'13rem'}}>
         <Routes>
-            <Route path='/' element= {<Dashboard/>}/>
+            <Route path='dashboard' element= {<Dashboard/>}/>
             <Route path='Acquires' element= {<Acquires/>}/>
             
             <Route path='Merchants' element= {<Merchants/>}/>
@@ -50,7 +50,7 @@ function TmsApp() {
             <Route path='Bin' element= {<Bin/>}/>
             <Route path='logout' element= {<Logout/>}/>
             <Route path='Server-Health' element= {<ServHealth/>}/>
-            <Route path='licensing' element= {<LIcensing/>}/>
+            <Route path='licencing' element= {<LIcensing/>}/>
             <Route path='Notification-Setting' element= {<Notification/>}/>
             <Route path='setting' element= {<Settings/>}/>
         </Routes>

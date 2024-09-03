@@ -7,12 +7,16 @@ import Paging from '../../Components/ShowPages/Paging';
 
 
 function Merchants() {
-  const[currentpage, setCurrentpage] = useState(1);
-  const[postperpage, setPostperpage] = useState(5);
+  const [currentpage, setCurrentpage] = useState(1);
+  const [postperpage, setPostperpage] = useState(5);
 
   const lastpostindex = currentpage * postperpage
   const firstpostindex = lastpostindex - postperpage;
   const currentpost = DataMerchants.slice(firstpostindex, lastpostindex);
+
+  const [toggle, setToggle] = useState(true)
+  const [move, setMove] = useState()
+
   return (
 
     <Div >
@@ -34,7 +38,7 @@ function Merchants() {
             <th>ENABLE ALL TRANS. TYPES </th>
           </tr>
           {
-            currentpost.map((item,id) => {
+            currentpost.map((item, id) => {
               return (
                 <tr key={id}>
                   <td className='pl-[4rem]'>{item.name}</td>
@@ -44,24 +48,31 @@ function Merchants() {
                   <td>{item.Email}</td>
                   <td>{item.LGA}</td>
                   <td >{item.code}</td>
-                  <td className='pl-14'><button>d</button></td>
+                  <td className='pl-14 cursor-pointer'><div style={{ width: '1.6rem', height: '5px', background: '#cccc' }} >
+                    <div style={{ position: 'relative', top: '-10px', }} className={toggle && move === id ? 'pl-6' : 'pl-0 text-red-700'} onClick={() => { setToggle(!toggle); setMove(id) }}>d</div></div>
+                  </td>
                 </tr>
               )
             })
           }
         </table>
       </div>
-      <div className='pl-[13rem] pr-[4rem] mb-6'><Paging 
-         postperpage={postperpage}
-         setPostperpage={setPostperpage}
-         setCurrentpage ={setCurrentpage}
-         currentpage = {currentpage}
-         data ={DataMerchants}
+      <div className='pl-[13rem] pr-[4rem] mb-6'><Paging
+        postperpage={postperpage}
+        setPostperpage={setPostperpage}
+        setCurrentpage={setCurrentpage}
+        currentpage={currentpage}
+        data={DataMerchants}
       />
       </div>
 
     </Div>
   )
+  function handletoggle() {
+    setToggle(!toggle);
+    // console.log(it);
+  }
+
 }
 
 export default Merchants
