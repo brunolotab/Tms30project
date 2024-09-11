@@ -4,7 +4,7 @@ import Navbar from '../../Components/Navbar'
 
 function LIcensing() {
   return (
-    <div className='pl-6 px-3 bg-gray-50'>
+    <div className=' px-3 bg-gray-50 pl-[13rem]'>
         <div>
         <div><Navbar /> </div>
         <div className='mt-3 w-[100%]  border border-slate-200'>

@@ -26,7 +26,7 @@ function ServHealth() {
   console.log(tabs);
 
   return (
-    <div>
+    <div className='pl-[13rem]'>
       <div>
         <Navbar />
         <div className='m-3 pl-3 text-[13px]'>

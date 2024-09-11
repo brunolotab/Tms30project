@@ -32,7 +32,7 @@ function Notification() {
 
 
   return (
-    <div>
+    <div className='pl-[13rem]'>
       <div><Navbar /></div>
       <div className='text-lg border-b p-4 pl-10'>Notification Settings</div>
       <div className='flex gap-[4rem] pl-8 items-center text-[13px] border'>

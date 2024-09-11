@@ -6,7 +6,7 @@ import styled from 'styled-components';
 function Processors() {
   const dataProcessor = Processordata;
   return (
-    <Div>
+    <Div className='pl-[13rem]'>
       <Navbar />
       <div className='flex justify-between align-middle bg-white p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
         <div className='text-[20px] pl-3' style={{fontFamily:'semiBoldFont'}}>Processors</div>

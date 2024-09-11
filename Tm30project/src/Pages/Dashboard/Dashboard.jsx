@@ -4,6 +4,7 @@ import Rightsidebar from './Rightsidebar'
 import Barchart from './Charts/Barchart'
 import Donutpie from '../../SDonutpie'
 import ApexChart from './Barchart'
+// import Sidebar from '../../Components/Sidebar'
 
 
 
@@ -11,7 +12,8 @@ function Dashboard() {
 
     return (
         <>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', width: '100%', background: '#fefefe' }}>
+        {/* <Sidebar/> */}
+            <div className='pl-[13rem]' style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', width: '100%', background: '#fefefe' }}>
 
                 <div style={{ gridRowStart: '1', gridColumnstart: '1', gridColumnEnd: '1' }}>
                     <div><Navbar /> </div>
@@ -98,15 +100,15 @@ function Dashboard() {
                                     <td>Access Bank</td>
                                     <td>99%</td>
                                 </tr>
-                                <tr  className='flex justify-between w-[23rem]  pr-[6rem] p-2 border-b '>
+                                <tr className='flex justify-between w-[23rem]  pr-[6rem] p-2 border-b '>
                                     <td>Sterling Bank</td>
                                     <td>99%</td>
                                 </tr>
-                                <tr  className='flex justify-between w-[23rem]  pr-[6rem] p-2 border-b '>
+                                <tr className='flex justify-between w-[23rem]  pr-[6rem] p-2 border-b '>
                                     <td>GT Bank</td>
                                     <td>99%</td>
                                 </tr>
-                                <tr  className=' flex justify-between w-[23rem]  pr-[6rem] p-2  '>
+                                <tr className=' flex justify-between w-[23rem]  pr-[6rem] p-2  '>
                                     <td>First Bank</td>
                                     <td>99%</td>
                                 </tr>

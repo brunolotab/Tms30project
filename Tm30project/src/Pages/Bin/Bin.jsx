@@ -14,7 +14,7 @@ function Bin() {
   const currentpost = BinData.slice(firstpostindex, lastpostindex);
 
   return (
-    <Div >
+    <Div className='pl-[13rem]' >
       <div>
         <Navbar />
         <div className='flex justify-between align-middle bg-white w-[97%] p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >

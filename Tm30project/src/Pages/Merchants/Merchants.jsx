@@ -19,7 +19,7 @@ function Merchants() {
 
   return (
 
-    <Div >
+    <Div className='pl-[13rem]' >
       <Navbar />
       <div className='flex justify-between align-middle bg-white p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
         <div className='font-bold text-xl'>Merchants</div>
@@ -44,13 +44,21 @@ function Merchants() {
                   <td className='pl-[4rem]'>{item.name}</td>
                   <td>{item.MID}</td>
                   <td>{item.Tid}</td>
-                  <td>{item.AcqId}</td>
+                  <td>{item.AcqId}</td>            
                   <td>{item.Email}</td>
                   <td>{item.LGA}</td>
                   <td >{item.code}</td>
-                  <td className='pl-14 cursor-pointer'><div style={{ width: '1.6rem', height: '5px', background: '#cccc' }} >
-                    <div style={{ position: 'relative', top: '-10px', }} className={toggle && move === id ? 'pl-6' : 'pl-0 text-red-700'} onClick={() => { setToggle(!toggle); setMove(id) }}>d</div></div>
+                  <td >
+                    <div style={{ width: '1.6rem', height: '5px', background: '#cccc' }} >
+                      <div style={{ position: 'relative', top: '-10px', }} className={toggle  === id ? 'pl-6' : 'pl-0 text-red-700'} onClick={() => handleAction(id)}>
+                        {item.type}
+                      </div>
+                    </div>
                   </td>
+                  {/* onClick={() => handleAction(id)} */}
+                  {/* <td className='pl-14 cursor-pointer'><div style={{ width: '1.6rem', height: '5px', background: '#cccc' }} >
+                    <div style={{ position: 'relative', top: '-10px', }} className={toggle && move === id ? 'pl-6' : 'pl-0 text-red-700'} onClick={() => { setToggle(!toggle); setMove(id) }}>d</div></div>
+                  </td> */}
                 </tr>
               )
             })
@@ -68,7 +76,7 @@ function Merchants() {
 
     </Div>
   )
-  function handletoggle() {
+  function handleAction(it) {
     setToggle(!toggle);
     // console.log(it);
   }

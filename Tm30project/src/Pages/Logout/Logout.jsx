@@ -5,7 +5,7 @@ import Navbar from '../../Components/Navbar'
 
 function Logout() {
   return (
-    <Div className=' text-[14px] w-[100%]' >
+    <Div className=' text-[14px] w-[100%] pl-[13rem]' >
       <Navbar/>
       <div>
         <div className='text-lg border border-slate-200 pl-8 p-4 w-[100%]'>Activity Log</div>

@@ -16,7 +16,7 @@ function Transactions() {
   const currentpost = Datatransaction.slice(firstpostindex, lastpostindex);
 
   return (
-    <Div>
+    <Div className='pl-[13rem]'>
       <Navbar />
       <div className='flex justify-between align-middle bg-white p-3 border border-l-0 border-b-slate-200 border-t-0 px-6'  >
         <div className='font-bold text-xl'>Transactions</div>
