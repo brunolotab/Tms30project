@@ -1,8 +1,6 @@
 
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import './App.css'
-// import Sidebar from './Components/Sidebar'
-// import Homepage from './Homepage/Homepage'
 import TmsApp from './TmsApp'
 import Merchants from './Pages/Merchants/Merchants'
 import Acquires from './Pages/Acquires/Acquires'
@@ -54,13 +52,7 @@ function App() {
     )
   )
 
-  // return (
-  // <>
-  {/* <Homepage/> */ }
-  {/* <TmsApp /> */ }
-
-  //</>
-  // )
+  
   return <RouterProvider router={router} />
 }
 
