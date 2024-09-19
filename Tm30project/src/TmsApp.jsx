@@ -20,6 +20,7 @@ import Settings from './Pages/Settings/Settings'
 import PrimaryRouting from './Pages/Prirouting/PriRouting'
 import ActionData from './Pages/Secrouting/ActionInformation/ActionData'
 import Homepage from './Homepage/Homepage'
+import UserRoutes from './Userroute/UserRoutes'
 
 
 
@@ -30,32 +31,32 @@ function TmsApp() {
   return (
     <>
       <BrowserRouter>
-        {(path === 'Homepage' || path === '/') ? '' : <Sidebar />}
-        {/* {path !== 'Homepage' || path !== '/' && <Sidebar />} */}
+        {/* {(path === 'Homepage' || path === '/') ? '' : <Sidebar />} */}
 
         <Routes>
           <Route path='/' element={<Homepage />} />
           <Route path='Homepage' element={<Homepage />} />
-          <Route path='dashboard' element={<Dashboard />} />
-          {/* <Route path='dashboard' element={<Dashboard />} /> */}
-          <Route path='Acquires' element={<Acquires />} />
+          <Route element={<UserRoutes />}>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='Acquires' element={<Acquires />} />
 
-          <Route path='Merchants' element={<Merchants />} />
-          {/* <Route path='Merchant/:id' element= {<Merchants1james/>}/> */}
-          <Route path='Terminals' element={<Terminals />} />
-          <Route path='Transactions' element={<Transactions />} />
-          <Route path='HSM' element={<Hsm />} />
-          <Route path='Processors' element={<Processors />} />
-          <Route path='Primary-Routing' element={<PrimaryRouting />} />
-          <Route path='Secondary-Routing' element={<SecRouting />} />
-          <Route path='ActionData/:id' element={<ActionData />} />
+            <Route path='Merchants' element={<Merchants />} />
+            {/* <Route path='Merchant/:id' element= {<Merchants1james/>}/> */}
+            <Route path='Terminals' element={<Terminals />} />
+            <Route path='Transactions' element={<Transactions />} />
+            <Route path='HSM' element={<Hsm />} />
+            <Route path='Processors' element={<Processors />} />
+            <Route path='Primary-Routing' element={<PrimaryRouting />} />
+            <Route path='Secondary-Routing' element={<SecRouting />} />
+            <Route path='ActionData/:id' element={<ActionData />} />
 
-          <Route path='Bin' element={<Bin />} />
-          <Route path='logout' element={<Logout />} />
-          <Route path='Server-Health' element={<ServHealth />} />
-          <Route path='licencing' element={<LIcensing />} />
-          <Route path='Notification-Setting' element={<Notification />} />
-          <Route path='setting' element={<Settings />} />
+            <Route path='Bin' element={<Bin />} />
+            <Route path='logout' element={<Logout />} />
+            <Route path='Server-Health' element={<ServHealth />} />
+            <Route path='licencing' element={<LIcensing />} />
+            <Route path='Notification-Setting' element={<Notification />} />
+            <Route path='setting' element={<Settings />} />
+          </Route>
 
         </Routes>
       </BrowserRouter>

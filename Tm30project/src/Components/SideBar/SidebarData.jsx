@@ -99,4 +99,11 @@ export const SideData = [
         indicator: <BiChevronRight/>
     },
  
+    // {
+    //     title: 'Logout',
+    //     path : 'logout',
+    //     icon: <BiBookOpen/>,
+    //     indicator: <BiChevronRight/>
+    // },
+ 
 ] 

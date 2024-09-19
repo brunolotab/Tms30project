@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import {  Navigate, NavLink, useNavigate } from 'react-router-dom'
 import Avatar from '../assets/Icons/Avatar.jpg'
 // import { TiFolder } from 'react-icons/ti'
 // import { BiBookOpen, BiChevronRight } from 'react-icons/bi'
@@ -10,6 +10,11 @@ import { SideData } from './SideBar/SidebarData'
 
 function Sidebar() {
 
+  const Navigate = useNavigate();
+
+  // const handlelogout =() =>{
+  //   navigate ('/Hompage')
+  // }
 
   const Sidedata = SideData;
 
@@ -31,11 +36,18 @@ function Sidebar() {
                 )
               })
             }
+            <div className='border  cursor-pointer  rounded-[12px] w-36 bg-color1'
+              onClick={()=> { sessionStorage.clear(); Navigate ('/');}}>
+              LogOut
+            </div>
+
           </div>
         </div>
       </div>
     </Aiv>
   )
+
+  
 }
 
 export default Sidebar
