@@ -1,7 +1,8 @@
 import React from 'react'
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import Sidebar from '../Components/Sidebar';
 
-// function UserRoutes() {
+// function UserRoutes({ component: Component, ...rest }) {
 
     // const location = useLocation()
 
@@ -11,7 +12,14 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
         if (token !== null) {
             isAuthorized = true;
         }
-        return isAuthorized ? <Outlet /> : <Navigate to="/" />;
+        return (
+            <>
+                {isAuthorized ? <div>
+                    <Sidebar/>
+                    <Outlet />
+                </div>  : <Navigate to="/" />};
+            </>
+        )
 
 
         // const user = JSON.parse(sessionStorage.getItem('item'));
@@ -21,9 +29,11 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
         //   return (
         //     <>
-        //     {user? <Outlet/> : <Navigate to='/Homepage' state={{ from: location}} replace />}
+        //     {user?  <div><Sidebar/><Outlet/></div> : <Navigate to='/Homepage' state={{ from: location}} replace />}
         //     </>
         //   )
     }
+
+   
 
     export default UserRoutes

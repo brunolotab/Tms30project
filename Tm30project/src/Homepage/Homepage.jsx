@@ -26,14 +26,15 @@ function Homepage() {
              return alert('enter your email & password');
         }
         
-
-        sessionStorage.setItem("item", JSON.stringify(input));
-
+         sessionStorage.setItem("item", JSON.stringify(input));
+        
+        
+    
         const item = JSON.parse(sessionStorage.getItem('item'))
 
   
 
-        if (item ) {
+        if (item) {
             window.location.assign('/Dashboard')
 
         }else {
