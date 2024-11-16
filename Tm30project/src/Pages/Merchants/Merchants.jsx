@@ -15,7 +15,8 @@ function Merchants() {
   const currentpost = DataMerchants.slice(firstpostindex, lastpostindex);
 
   const [toggle, setToggle] = useState(true)
-  // const [move, setMove] = useState()
+  const [move, setMove] = useState()
+  const [mov, setMov] = useState()
 
   return (
 
@@ -50,9 +51,11 @@ function Merchants() {
                   <td >{item.code}</td>
                   <td >
                     <div style={{ width: '1.6rem', height: '7px', background: '#cccc', cursor:'pointer' }} >
-                      <div style={{ position: 'relative', top: '-10px', }} className={toggle && move  === id ? 'pl-6' : 'pl-0 text-red-700'} onClick={() => handleAction(id)}>
+                      <div style={{ position: 'relative', top: '-10px' }} className={toggle && move === id ? 'pl-6' : 'pl-0 text-red-700'} onClick={() => handleAction(id)}>
                         {
-                        item.type === id ? <div>444</div> : <div>55</div> }
+                        // item.type === toggle ? <div>444</div> : <div>55</div> 
+                        item.type
+                        }
                       </div>
                     </div>
                   </td>
@@ -78,7 +81,9 @@ function Merchants() {
     </Div>
   )
   function handleAction(it) {
+    setMove(it)
     setToggle(!toggle);
+    // setMov(!move)
     // console.log(it);
   }
 
