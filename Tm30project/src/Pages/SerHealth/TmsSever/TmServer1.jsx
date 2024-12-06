@@ -1,57 +1,62 @@
-import React from 'react'
-import { server1 } from './ServerPanel/Server1Panel'
+import React, { useState } from 'react'
+import { ServWares } from '../ServWares/ServerWares'
+// import { server1 } from './ServerPanel/Server1Panel'
 import restart from '../../../assets/health/restart.png'
 import left from '../../../assets/health/Left.png'
 import trash from '../../../assets/health/Trash 2.png'
+import ServerPanel from './Folder1TmServer1/ServerPanel'
+import Application from './Folder1TmServer1/Application'
+import Firewall from './Folder1TmServer1/Firewall'
+import ServerLoss from './Folder1TmServer1/ServerLoss'
+import ApplicationLoss from './Folder1TmServer1/ApplicationLoss'
+import Services from './Folder1TmServer1/Service'
+import Alright from './Folder1TmServer1/Alright'
+
 
 function TmServer1() {
-  const connect = [{ name: 'FIREWALL', icon: left}, { name: ' RESTART', icon: restart  }, { name: 'DISCONNECT', icon: trash }]
+  // const connect = [{ name: 'FIREWALL', icon: left}, { name: ' RESTART', icon: restart  }, { name: 'DISCONNECT', icon: trash }]
+  // return (
+  //   <div>
+  //     <ServerWares/>
+  //     {/* //{ */}
+  //     <ServerPanel/>
+  {/* } */ }
+
+  // const serverInformation = ['Server Panel', 'Application', 'firewall', 'server loss', 'application loss', 'services', 'alright']
+
+  const [tab, setTab] = useState('Server Panel');
+
   return (
     <div>
-      <div className='p-6 flex justify-between items-center'>
-        <div style={{ fontFamily: 'semiBoldFont' }}>
-          <div className='text-lg'>TMS SERVER 1<span>..</span></div>
-          <div className='text-[10px]'>45.77.10.3.173 <span className='pl-1 text-green-700'>CONNECTED</span></div>
-        </div>
-        <div className='flex justify-evenly w-[27rem] items-center'>
-          {
-            connect?.map((item, id) => {
-              return (
-                <div key={id} className='flex items-center gap-5'>
-                  <div><img src={item.icon}/></div>
-                  <div>{item.name}</div>
-
-                </div>
-              )
-            })
-          }
-        </div>
-      </div>
-      <div className='grid grid-cols-2 gap-8 w-[90%] pl-[4rem] text-[13px]'>
+      {/* <div className=' w-[80%]'> */}
+      <div className='border flex justify-evenly p-3 py-8'>
         {
-          server1?.map((item, id) => {
+          ServWares?.map((item, id) => {
             return (
-              <div key={id} className=' bg-[#e3e4ff] p-4 w-[22rem] flex items-center justify-between rounded-[8px]'>
-                <div className='flex items-center '>
-                  <div>
-                    <img src={item.icon}/>
-                  </div>
-                  <div>
-                    <div className='w-[8rem] text-[12px]'>{item.tag}</div>
-                    <div>{item.used}</div>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'column'}}>
-                  <div className='float-right'>{item.total}</div>
-                  <div className='w-[9rem]'><img src={item.img}/></div>
-                </div>
+              <div key={id}
+                className='uppercase rounded-[8px] p-1 cursor-pointer'
+                onClick={() => (setTab(item))}
+                style={{ border: item === tab ? ' 1px solid#1b59f8' : '' }}
+              >
+                {item}
               </div>
             )
           })
         }
       </div>
+      {
+        tab === 'Server Panel' ? <div><ServerPanel /></div> :
+          tab === 'Application' ? <div><Application /></div> :
+            tab === 'firewall' ? <div><Firewall /></div> :
+            tab === 'server loss' ? <div><ServerLoss/></div> :
+            tab === 'application loss' ? <div><ApplicationLoss/></div> :
+            tab === 'services'? <div><Services/></div> :
+              <div><Alright /></div>
+      }
+
     </div>
   )
+
 }
 
 export default TmServer1

@@ -6,11 +6,13 @@ import TmServer6 from './TmsSever/TmServer6'
 import TmServer2 from './TmsSever/TmSerrver2'
 // import TmServer3 from './TmsSever/Tmserver3'
 import TmServer5 from './TmsSever/TmServer5'
+// import ServerWares from './ServWares/ServerWares'
+// import ServerPanel from './TmsSever/Folder1TmServer1/ServerPanel'
 
 
 function ServHealth() {
 
-  const serverInformation = ['Server Panel', 'Application', 'firewall', 'server loss', 'application loss', 'services', 'alright']
+  // const serverInformation = ['Server Panel', 'Application', 'firewall', 'server loss', 'application loss', 'services', 'alright']
 
   const tmsServer = [
     'tms server 1',
@@ -53,7 +55,7 @@ function ServHealth() {
 
             </div>
             <div className=' w-[80%]'>
-              <div className='border flex justify-evenly p-3 py-8'>
+              {/* <div className='border flex justify-evenly p-3 py-8'>
                 {
                   serverInformation?.map((item, id) => {
                     return (
@@ -68,7 +70,8 @@ function ServHealth() {
                   })
                 }
 
-              </div>
+              </div> */}
+              {/* <ServerWares/> */}
               {tabs === 'tms server 1' ? <div><TmServer1/></div>: 
               tabs === 'tms server 2'? <div><TmServer2/></div>: 
               // tabs === 'tms server 3'? <div><TmServer3/></div>: 
@@ -76,6 +79,7 @@ function ServHealth() {
               tabs === 'tms server 5'? <div><TmServer5/></div>: 
               <div><TmServer6/></div>
               }
+             
              
             </div>
           </div>

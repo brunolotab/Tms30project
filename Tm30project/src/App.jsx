@@ -52,6 +52,8 @@ function App() {
           <Route path='Bin' element={<Bin />} />
           <Route path='logout' element={<Logout />} />
           <Route path='Server-Health' element={<ServHealth />} />
+         
+
           <Route path='licencing' element={<LIcensing />} />
           <Route path='Notification-Setting' element={<Notification />} />
           <Route path='setting' element={<Settings />} />

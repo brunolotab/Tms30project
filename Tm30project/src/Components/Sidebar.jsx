@@ -26,9 +26,9 @@ function Sidebar() {
           <div className='  leading-[3.0rem] p-4  pl-2 '>
 
             {
-              Sidedata.map((item) => {
+              Sidedata.map((item,i) => {
                 return (
-                  <div key={item.id}>
+                  <div key={i}>
                     <NavLink to={item.path}>
                       <div className='info'><div className='chevron'>{item.indicator}</div><div style={{ marginRight: '8px' }}>{item.icon}</div> {item.title}</div>
                     </NavLink>
