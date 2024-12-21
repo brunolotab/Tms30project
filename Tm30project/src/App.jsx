@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from 'react'
+import React, { lazy, Suspense } from 'react'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import './App.css'
 // import TmsApp from './TmsApp'
@@ -21,8 +21,14 @@ import Settings from './Pages/Settings/Settings'
 import Homepage from './Homepage/Homepage'
 import Terminals from './Pages/Terminals/Terminals'
 import UserRoutes from './Userroute/UserRoutes'
+import TmServer1 from './Pages/SerHealth/TmsSever/TmServer1'
+import TmServer2 from './Pages/SerHealth/TmsSever/TmSerrver2'
+import TmServer3 from './Pages/SerHealth/TmsSever/TmServer3'
+import TmServer4 from './Pages/SerHealth/TmsSever/TmServer4'
+import TmServer5 from './Pages/SerHealth/TmsSever/TmServer5'
+import TmServer6 from './Pages/SerHealth/TmsSever/TmServer6'
 // import TmsLayout from './TmsLayout'
-const LazyDashbord = lazy(()=> import('./Pages/Dashboard/Dashboard'))
+const LazyDashbord = lazy(() => import('./Pages/Dashboard/Dashboard'))
 
 function App() {
   const router = createBrowserRouter(
@@ -31,12 +37,12 @@ function App() {
         <Route index element={<Homepage />} />
 
         <Route path='/' element={<UserRoutes />} >
-        {/* <Route  element={<TmsLayout />} > */}
+          {/* <Route  element={<TmsLayout />} > */}
           <Route path='dashboard' element={
-            <Suspense fallback = {<h1 className='flex items-center justify-center font-extrabold text-blue-700'>Loading ... </h1>}>
+            <Suspense fallback={<h1 className='flex items-center justify-center font-extrabold text-blue-700'>Loading ... </h1>}>
               <LazyDashbord />
-              </Suspense>
-            } />
+            </Suspense>
+          } />
           <Route path='Acquires' element={<Acquires />} />
 
           <Route path='Merchants' element={<Merchants />} />
@@ -51,8 +57,15 @@ function App() {
 
           <Route path='Bin' element={<Bin />} />
           <Route path='logout' element={<Logout />} />
-          <Route path='Server-Health' element={<ServHealth />} />
-         
+          <Route path='Server-Health' element={<ServHealth />} >
+            <Route path='TmServer1' element={<TmServer1/>} />
+            <Route path='TmServer2' element={<TmServer2/>} />
+            <Route path='TmServer3' element={<TmServer3/>} />
+            <Route path='TmServer4' element={<TmServer4/>} />
+            <Route path='TmServer5' element={<TmServer5/>} />
+            <Route path='TmServer6' element={<TmServer6/>} />
+          </Route>
+
 
           <Route path='licencing' element={<LIcensing />} />
           <Route path='Notification-Setting' element={<Notification />} />
@@ -63,11 +76,11 @@ function App() {
     )
   )
 
-  
+
   return (<RouterProvider router={router} />)
-  
-    
-  
+
+
+
 }
 
 export default App
