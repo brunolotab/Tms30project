@@ -58,12 +58,12 @@ function App() {
           <Route path='Bin' element={<Bin />} />
           <Route path='logout' element={<Logout />} />
           <Route path='Server-Health' element={<ServHealth />} >
-            <Route path='TmServer1' element={<TmServer1/>} />
-            <Route path='TmServer2' element={<TmServer2/>} />
-            <Route path='TmServer3' element={<TmServer3/>} />
-            <Route path='TmServer4' element={<TmServer4/>} />
-            <Route path='TmServer5' element={<TmServer5/>} />
-            <Route path='TmServer6' element={<TmServer6/>} />
+            <Route path='/Server-Health/' element={<TmServer1/>} />
+            {/* <Route path='/Server-Health/TmServer2' element={<TmServer2/>} />
+            <Route path='/Server-Health/TmServer3' element={<TmServer3/>} />
+            <Route path='/Server-Health/TmServer4' element={<TmServer4/>} />
+            <Route path='/Server-Health/TmServer5' element={<TmServer5/>} />
+            <Route path='/Server-Health/TmServer6' element={<TmServer6/>} /> */}
           </Route>
 
 

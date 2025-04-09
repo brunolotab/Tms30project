@@ -9,13 +9,15 @@ function ActionData() {
     const handleback = () => {
         Navigate(-1)
     }
+    console.log(id);
+    
     return (
-        <div>
+        <div className='pl-[13rem]'>
               <Navbar/>
-            <div className='pl-7'>
+            <div className='pl-10'>
               
                 <div className='flex items-center gap-5 text-lg border-b py-4 uppercase '>
-                    <div onClick={handleback}>{'<'}</div>
+                    <div onClick={handleback} className='bolder cursor-pointer'>{'<-'}</div>
                     <div style={{ fontFamily: 'semiBoldFont' }}>master card</div>
                 </div>
                 <div className='py-4 pt-4 border-b'>

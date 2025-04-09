@@ -8,6 +8,7 @@ import TmServer2 from './TmsSever/TmSerrver2'
 import TmServer5 from './TmsSever/TmServer5'
 import { NavLink, Outlet } from 'react-router-dom'
 import styled from 'styled-components'
+import { MdPattern } from 'react-icons/md'
 // import ServerWares from './ServWares/ServerWares'
 // import ServerPanel from './TmsSever/Folder1TmServer1/ServerPanel'
 
@@ -28,6 +29,7 @@ function ServHealth() {
   // const [tabs, setTabs] = useState('tms server 1');
   // const [tab, setTab] = useState('Server Panel');
   // console.log(tabs);
+    const [display, setDisplay] = useState(<div><TmServer1/></div>)
 
   return (
     <Aiv>
@@ -55,17 +57,18 @@ function ServHealth() {
                   )
                 })
               } */}
-              <NavLink to='TmServer1'> TmServer1</NavLink>
-              <NavLink to='TmServer2'> TmServer2</NavLink>
-              <NavLink to='TmServer3'> TmServer3</NavLink>
-              <NavLink to='TmServer4'> TmServer4</NavLink>
-              <NavLink to='TmServer5'> TmServer5</NavLink>
-              <NavLink to='TmServer6'> TmServer6</NavLink>
+              <NavLink to='/Server-Health/' className={({ isActive})=> (isActive ? 'nav' : '')}>TmServer1 </NavLink>
+              <NavLink to='/Server-Health/TmServer2'> TmServer2</NavLink>
+              <NavLink to='/Server-Health/TmServer3'> TmServer3</NavLink>
+              <NavLink to='/Server-Health/TmServer4'> TmServer4</NavLink>
+              <NavLink to='/Server-Health/TmServer5'> TmServer5</NavLink>
+              <NavLink to='/Server-Health/TmServer6'> TmServer6</NavLink>
          
 
             </div>
             <div className=' w-[80%]'>
-              
+             
+              {/* {display} */}
               {/* {tabs === 'tms server 1' ? <div><TmServer1/></div>: 
               tabs === 'tms server 2'? <div><TmServer2/></div>: 
               // tabs === 'tms server 3'? <div><TmServer3/></div>: 
@@ -98,10 +101,17 @@ const Aiv = styled.div`
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     margin-bottom: 0.2rem ;
+    margin-top: 0.3rem ;
     text-transform: uppercase;
     padding-left: 8px;
   }
   a.active {
+    text-decoration: none;
+    background:#1B59F8;
+    color: #ffff;
+    border-left: 4px solid #0a44d8;
+  }
+  .nav {
     text-decoration: none;
     background:#1B59F8;
     color: #ffff;

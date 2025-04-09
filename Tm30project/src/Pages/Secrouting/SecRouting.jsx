@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import Navbar from '../../Components/Navbar'
 import { SecondaryData } from './SecordaryData/SecondaryData'
 import styled from 'styled-components'
@@ -21,10 +21,12 @@ function SecRouting() {
 
   const Navigate = useNavigate()
   const handleAction = (it) => {
-    // console.log(it);
+    console.log(it);
     Navigate(`/ActionData/${it}`)
     // Navigate(`/ActionData/${it}`)
   }
+  
+  
   return (
     <Div className='pl-[13rem]'>
       <Navbar/>
